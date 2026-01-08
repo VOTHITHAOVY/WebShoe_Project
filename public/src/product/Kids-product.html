@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trang Trẻ em - Fashion Store</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="icon" href="../assets/img/Mainlogo.png">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/Cart.js"></script>
+<script src="../js/Search.js" defer></script>
+<link rel="stylesheet" href="../css/Kids.css">
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+              "text-main": "#0d121b",
+              "text-secondary": "#4c669a",
+            },
+            fontFamily: {
+              "display": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-main antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<div class="w-full bg-white dark:bg-[#101622] border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="layout-container flex justify-center w-full">
+<div class="px-4 md:px-10 lg:px-40 py-3 w-full max-w-[1440px]">
+  <header class="sticky top-0 z-50 w-full border-b border-[#e7ebf3] bg-background-light/95 backdrop-blur dark:bg-background-dark/95 dark:border-gray-800">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-8">
+    <a class="flex items-center gap-2 text-text-main dark:text-white group" href="#">
+    <div class="size-8 text-primary">
+    
+    </div>
+                    <a href="/Myproject/index.html">
+                    <img src="../assets/img/Mainlogo.png" alt="" class="main-logo">
+                    <div class="My-store">Azces Store</div>
+                    </a>
+                    </a>
+                    <nav class="hidden md:flex items-center gap-6">
+                      <a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary" href="../product/Male-product.html">Nam</a>
+                    <a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary" href="../product/Female-product.html">Nữ</a>
+                    <a class="text-sm font-bold text-primary" href="../product/Male-product.html">Trẻ em</a>
+                  </nav>
+                    </div>
+                    <div class="flex flex-1 justify-end gap-4 items-center">
+                      <div class="relative w-80">
+                        <!-- input search -->
+                        <input
+                          type="text"
+                          id="searchInput"
+                          placeholder="Search......"
+                          class="w-full h-10 pl-4 pr-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-slate-900 dark:text-white outline-none"
+                        />
+                      
+                        <!-- icon search -->
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2">
+                          <span class="material-symbols-outlined text-[20px]">search</span>
+                        </button>
+                      
+                        <!-- box kết quả -->
+                        <div
+                          id="searchResult"
+                          class="absolute top-12 left-0 w-full bg-white dark:bg-gray-900 shadow-lg rounded-lg hidden z-50 max-h-72 overflow-y-auto"
+                          style="color:white;"
+                        ></div>
+                      </div>
+                    <div class="flex items-center gap-2">
+                    <button class="sm:hidden flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800">
+                    <span class="material-symbols-outlined" style="font-size: 24px;" id="search">search</span>
+                    </button>
+                    <button class="flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 relative group" id="circle">
+                    <span class="material-symbols-outlined group-hover:text-primary transition-colors" style="font-size: 24px;" id="shopping">shopping_bag</span>
+                    <span class="absolute top-1.5 right-1.5 size-2 rounded-full bg-primary"></span>
+                    </button>
+                     <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-blue-700 transition-colors text-white text-sm font-bold tracking-wide" id="Login">
+                <a href="../user/Login.html" ><span class="truncate">Đăng nhập</span></a>
+                </button>
+                <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors text-slate-900 dark:text-white text-sm font-bold tracking-wide" id="Signin">
+                <a href="../user/Sigin.html" ><span class="truncate">Đăng ký</span></a>
+                </button>
+                    <button class="flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 group">
+                      <button id="cartBtn"
+                            class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-slate-900 dark:text-white transition-colors">
+                            <span class="material-symbols-outlined text-[20px]" id="cart">shopping_cart</span>
+                            <span id="cartCount">0</span>
+                            </button>
+    
+                            <div id="cartDropdown">
+                            <ul id="cartItems"></ul>
+    
+                            <div style="margin-top:8px; display:flex; justify-content:space-between; align-items:center;">
+                                <span class="total">Tổng: <strong id="cartTotal">0₫</strong></span>
+                                <button id="clearCart"
+                                style="font-size:13px;color:red;border:1px solid red;padding:4px 8px;border-radius:6px;">
+                                Xóa tất cả
+                                </button>
+                            </div>
+                            <div style="display: flex;
+                            justify-content: center;
+                            background-color: rgb(26, 24, 24);
+                            margin-top:5%;
+                            align-items: center;
+                            height: 40px;
+                            border-radius: 10px;
+                            color:white;
+                            padding-bottom: 10px;
+                            ">
+                              <a href="../product/Chi-Tieit/Chi-Tiet-San-Pham.html"style="margin-top:8px;
+                            
+                            "><span>Chi tiết và thanh toán</span></a>
+                            </div>
+    
+                            </div>
+                              <div class="nav-media">
+                          <input type="checkbox" id="toggleMenu" hidden>
+                          <label for="toggleMenu" class="setting">☰</label>
+    
+                          <div id="menu2">
+                            <a href="/Myproject/index.html"><li>Home</li></a>
+                            <li>About</li>
+                            <li>Contact</li>
+                            <a href="../product/Male-product.html"><li>Male</li></a>
+                            <a href="../product/Female-product.html"><li>Female</li></a>
+                            <a href="../product/Kids-product.html"><li>Kids</li></a>
+                            <a href="../user/Login.html"><li>Login</li></a>
+                          </ul>
+                        </div>
+                      </div>
+          <!--Login-->
+               <div class="nav">
+                        <span id="helloUser" class="helloUser"></span>
+    
+                        <label onclick="menu.hidden^=1"
+                            class="material-symbols-outlined cursor-pointer hover:text-primary"
+                            style="font-size: 24px;" id="user-icon">
+                            person
+                        </label>
+    
+                        <ul id="menu" hidden>
+                            <a href="index.html"><li>Home</li></a>
+                            <li>About</li>
+                            <li id="logoutBtn" style="color:red;cursor:pointer">Đăng xuất</li>
+                        </ul>
+                        </div>
+    </button>
+    </div>
+    </div>
+    </div>
+    </header>
+</div>
+</div>
+</div>
+<div class="layout-container flex h-full grow flex-col items-center">
+<!-- Breadcrumbs -->
+<div class="w-full max-w-[960px] px-4 md:px-0 py-4">
+<div class="flex flex-wrap gap-2 text-sm">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors font-medium" href="#">Trang chủ</a>
+<span class="text-slate-400 dark:text-slate-600">/</span>
+<span class="text-slate-900 dark:text-white font-medium">Trẻ em</span>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="w-full max-w-[960px] px-4 md:px-0 pb-10">
+<div class="@container">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end px-6 pb-10 md:px-12" data-alt="Dynamic shot of a happy child running outdoors in colorful clothes" style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYipNTyew3DPqMY7LJKbxGD2t5mJPTYVb8VqPkzYvJYbKw5_nmZbeE4H9vE-rbJ5uPhkiXYgTmZrQamBDvYEG72u47AXdyqPOPrqqCfMZN98cazbjGKSBtjUM5zH6_WjH9o7FAZFnBW8RUJNS9UlCsiDfcdiY4nGd4ju0OQlSUhK6-AM9EyoTZjVVYpsozku-D_ybIJ4h4_z5HtPad90X4pMs7T9HCa6hTeKziRBGVti5dx0i_jWIbbxt13BiC2Io01LiXNBqEi70");'>
+<div class="flex flex-col gap-2 text-left max-w-lg">
+<span class="inline-block px-3 py-1 bg-primary text-slate-900 text-xs font-bold uppercase tracking-wider rounded-full w-fit mb-2">Bộ sưu tập mới</span>
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+                                Phong cách nhí<br/>năng động
+                            </h1>
+<h2 class="text-slate-100 text-base md:text-lg font-normal leading-relaxed mt-2">
+                                Thiết kế thoải mái, bền bỉ cho bé thỏa sức vui chơi cả ngày dài. Khám phá ngay những mẫu mới nhất mùa này.
+                            </h2>
+</div>
+<button class="flex items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary hover:bg-[#d9b70b] transition-colors text-slate-900 text-base font-bold leading-normal tracking-[0.015em] mt-4">
+<span class="truncate">Khám phá ngay</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Categories Section -->
+<div class="w-full max-w-[960px] px-4 md:px-0 pb-12">
+<div class="flex justify-between items-end pb-5 px-1">
+<h2 class="text-slate-900 dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em]">Danh mục chính</h2>
+<a class="text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-primary transition-colors flex items-center gap-1" href="#">
+                        Xem tất cả <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Card 1 -->
+<a class="group relative overflow-hidden rounded-xl aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4]" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Close up of colorful kids sneakers on pavement" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo7qA0toBXSGZKurzJm69M-KKQh-uLA6TouIfBgC65ihts_B9SO4bihERfyfLZGj8rxsXYTEYhu1lh10h0Ery81XmG-qDx0fP5btlQtxh6bzsSu1osnY5e0gnvm7rKvqnQfSrmrQRxOI-yJUmdnZxPTyUJAc32BBpdqyQr97cSlSnq6H_Crqs4HuPzSKAzyUnOwICTEUpjcNJo9H8lhCewfEop6oJKjaW9qGW3YVyEhZrUn0ykkQhlsPMt1oUdvrIxe_AOmrBN2m4");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<p class="text-white text-2xl font-bold leading-tight mb-1">Giày Trẻ em</p>
+<p class="text-slate-200 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">Sneakers, Sandals &amp; Boots</p>
+</div>
+</a>
+<!-- Card 2 -->
+<a class="group relative overflow-hidden rounded-xl aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4]" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Kid wearing a stylish t-shirt and shorts set" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiba9aX8tFtZX1VVd6kDCpgCewA9pDWnntGbZvMEdtc0uemFBoEhFMGJJ2NhLXU87NSBqSt_fsEPJTWrYHYOlDhyquyDlqMTH4m2HhUueCTEZBpMBQssLDJJnoXMyUGG6jAdXrsalsRHe9iFc4Dznqcj55HkP8_N_SQVM9BYMb158Ddr0heRvZZUKXapPRGbbTOtXeRcnAfb565_9nDzklXMSzS2YPQ9xi6AAB-xyGe9Bc-SHuxExezZcfHwi9Uy4eFubkSwYWJ7w");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<p class="text-white text-2xl font-bold leading-tight mb-1">Quần áo</p>
+<p class="text-slate-200 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">Áo thun, Quần short &amp; Váy</p>
+</div>
+</a>
+<!-- Card 3 -->
+<a class="group relative overflow-hidden rounded-xl aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4]" href="#">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Child wearing a cozy hoodie in autumn setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvHDJexmuvpvWzWuyZoDYIl0n4kjCZ5yPzLeN-jZFyDozOvQXoIbegb7_h4EYQIjWKo_Uqq5FKuB2A2yWG79xluuBjsFQt6AdK5PQOdcHALdhHcMaemNsfGdiS8TmLmr3zKxjXLgBr3fOPi-Twd99YJXNP9CJ9ubBsE1rcYOrYElRlCl5a2p7TUXlpPiYnP9pxwtc0JNwxvjmk4qMeKcbk30LiG9MxtLOIXqCFh406fKhILrzU1A4F5eMJR-0G7thzxX8nN5QPq5c");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<p class="text-white text-2xl font-bold leading-tight mb-1">Hoodies &amp; Áo khoác</p>
+<p class="text-slate-200 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">Ấm áp &amp; Phong cách</p>
+</div>
+</a>
+</div>
+</div>
+<!-- Featured Products -->
+<div class="w-full max-w-[1260px] px-4 md:px-0 pb-16">
+<div class="flex justify-between items-end pb-5 px-1">
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Sản phẩm bán chạy</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Product 1 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-[4/5]">
+<img alt="Áo Thun Graphic Dinosaur" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Green t-shirt with dinosaur graphic for kids" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwrrmSaHOvaf7qMqTHteg-_QJj39x9UtL5JvVwsCmyM1BkHWSiXVJeNTv2MuPc_CaQn2tmrzzUQTbS7pJN_ckIddkr-Lzn3ZJTgnKFTHaqEDAKHJqy7Y9yhheJsnRys_Bs2J_6NB_aR8yQJXJE_wAUZ3bdj0XfnuaLpaAKP09IzAuM_lK5AfQ5h0c_A1P2vcn92Dw0T2ylGHOEIAG7XDjmIXlRzOML3vK678Y8AiWvVY7cYRWwAHkb55A0h3WY94plJwyrqHI8zPQ"/>
+<button class="absolute bottom-3 right-3 h-10 w-10 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-md translate-y-14 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary dark:hover:bg-primary">
+<span class="material-symbols-outlined text-slate-900 text-[20px]">add_shopping_cart</span>
+</button>
+<div class="absolute top-3 left-3 bg-primary text-slate-900 text-[10px] font-bold px-2 py-1 rounded">HOT</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white font-medium text-base line-clamp-1 group-hover:text-primary transition-colors">Áo Thun Graphic Dinosaur</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">150.000đ</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-[4/5]">
+<img alt="Giày Thể Thao Cao Cổ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="White high-top sneakers for children on plain background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBczssMdI-gy3vwsMul6J_qWRJUyVhICE75y4dsCW3Q9HslKcdqtgnicktCCyhrPRWkqPjWshxh5IKjVjI9FHagKsf3BvXHFpT9X4EWilgBFddHmVGRD5oCV-efaPzuR4gcuYOzxaHrFKsK3VMPKe-_kWbJQMDLmc13DbGPgoUzJ67UhnqLljB0YhwVHX6bWuzfkyvQ15Xp5tZqU75g5ycUJNIHjSI8AghBTtg61_-qUHGuMbP7yZZETlDpPTMAZf5_zdfMDY5I4-E"/>
+<button class="absolute bottom-3 right-3 h-10 w-10 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-md translate-y-14 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary dark:hover:bg-primary">
+<span class="material-symbols-outlined text-slate-900 text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white font-medium text-base line-clamp-1 group-hover:text-primary transition-colors">Giày Thể Thao Cao Cổ</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">450.000đ</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-[4/5]">
+<img alt="Áo Hoodie Basic Vàng" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Yellow hoodie on a hanger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhec1wLPT8cVDxJ9kVQH6__OGqQdAAr9v0sJxXiRJ0OmzsGAfBbmSqJp8g56_gtkvF-4o8HrFTzMy7mXGXAW2VKFhm0I7y_0TZDqgPCjHQX3bGiVxy3CyodwiAuKXBxm8oONFr1I16cCVHubLKgAMrCLcCIW0_MD4g_Ic6sjK7MhH0Cd4UE8Z-j5zH6tUCV7_kyPjbPniavzFYLk7T_X_eYgy4t_vgeJ3ZP9sfUJIj-FQ2CWXyUi39XkMPpjitEX7nmG42qW-t2Rk"/>
+<button class="absolute bottom-3 right-3 h-10 w-10 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-md translate-y-14 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary dark:hover:bg-primary">
+<span class="material-symbols-outlined text-slate-900 text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white font-medium text-base line-clamp-1 group-hover:text-primary transition-colors">Áo Hoodie Basic Vàng</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm">320.000đ</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 aspect-[4/5]">
+<img alt="Quần Jeans Co Giãn" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Folded denim jeans texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbDaaDr3FOtTnEntT6DkQb1B2SjFhnYDYi2sGZbnHgFDr8F0dEaDgN29tmGmb-_5g41ZIAYc2NauRNN1XgtkSjIb9219PAdkV2SwmuDObUzvlDBLKNmWtSwe-LPp0hd_cnRS1B3cs4l-qqUVRBwPu-RgdLlyYl0iKy_vNo-dYnSuzLmp9DZwTR8oaS67_gfWYI-MimWch7-4kijPF7BqOjs9I1v4DMQ6-NnBrQidEjXYueCZn2kCMjKvK08m8S25BqDg0jCnzGtJo"/>
+<button class="absolute bottom-3 right-3 h-10 w-10 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-md translate-y-14 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary dark:hover:bg-primary">
+<span class="material-symbols-outlined text-slate-900 text-[20px]">add_shopping_cart</span>
+</button>
+<div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">-20%</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white font-medium text-base line-clamp-1 group-hover:text-primary transition-colors">Quần Jeans Co Giãn</h3>
+<div class="flex gap-2 items-center">
+<p class="text-red-500 font-bold text-sm">280.000đ</p>
+<p class="text-slate-400 text-xs line-through">350.000đ</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Promo Banner -->
+<div class="w-full max-w-[960px] px-4 md:px-0 pb-20">
+<div class="relative overflow-hidden rounded-xl bg-primary px-8 py-12 md:px-16 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8">
+<!-- Decorative Circle -->
+<div class="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-white opacity-20"></div>
+<div class="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-black opacity-5"></div>
+<div class="z-10 flex flex-col gap-4 text-center md:text-left max-w-md">
+<h2 class="text-slate-900 text-3xl md:text-4xl font-black leading-tight tracking-[-0.02em]">Mùa tựu trường<br/>Đã sẵn sàng chưa?</h2>
+<p class="text-slate-800 font-medium text-lg">Giảm ngay 20% cho đơn hàng đầu tiên khi mua sắm tại mục Trẻ em.</p>
+</div>
+<div class="z-10 bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg w-full max-w-sm">
+<div class="flex flex-col gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Đăng ký nhận tin để nhận mã giảm giá:</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-slate-100 dark:bg-slate-800 border-none rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary placeholder:text-slate-400" placeholder="Email của bạn" type="email"/>
+<button class="bg-primary text-slate-900 font-bold px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#1a180e] border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="layout-container flex justify-center w-full">
+<div class="px-4 md:px-10 lg:px-40 w-full max-w-[1440px]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-slate-900 dark:text-white mb-4">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-lg font-bold">Fashion Store</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                Cung cấp những mẫu thời trang mới nhất cho gia đình bạn với chất lượng tốt nhất và giá cả hợp lý.
+                            </p>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Mua sắm</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Thời trang Nam</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Thời trang Nữ</a></li>
+<li><a class="hover:text-primary transition-colors text-primary font-medium" href="#">Thời trang Trẻ em</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bộ sưu tập mới</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Hỗ trợ</h4>
+<ul class="flex flex-col gap-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Trạng thái đơn hàng</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Chính sách đổi trả</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Hướng dẫn chọn size</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Liên hệ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-4">Theo dõi chúng tôi</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span> <!-- Using generic icon for social -->
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-slate-900 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400 dark:text-slate-500">
+<p>© 2024 Fashion Store. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-slate-600 dark:hover:text-slate-300" href="#">Điều khoản</a>
+<a class="hover:text-slate-600 dark:hover:text-slate-300" href="#">Bảo mật</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

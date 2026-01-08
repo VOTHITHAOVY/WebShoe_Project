@@ -1,0 +1,21 @@
+#cartItems li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #e5e7eb;
+    font-size: 14px;
+  }
+  #cartBtn {
+    margin-top:15%;
+
+  }
+  #cartItems li:last-child {
+    border-bottom: none;
+  }
+#cartDropdown {
+  position: absolute;
+  left:10%;
+}
+  

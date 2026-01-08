@@ -1,0 +1,16 @@
+.main-logo {
+    cursor: pointer;
+    border-radius: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 20px;
+}
+.My-store{
+    width: 120px;
+    height: 30px;
+    margin-left:35%;
+    margin-top:-24%;
+    font-weight: bolder;
+    color: blue;
+    cursor: pointer;
+}

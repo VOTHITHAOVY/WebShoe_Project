@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trang Hoodie - Premium Collection</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f8f9fc",
+                        "background-dark": "#101622",
+                        "text-main": "#0d121b",
+                        "text-secondary": "#4c669a",
+                        "border-light": "#e7ebf3",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden group/design-root">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-border-light bg-white dark:bg-[#1a202c] dark:border-gray-800 px-4 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 md:gap-8">
+<div class="flex items-center gap-4 text-text-main dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined !text-3xl">checkroom</span>
+</div>
+<h2 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">Trang Fashion</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Men</a>
+<a class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Women</a>
+<a class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Kids</a>
+<a class="text-text-main dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Accessories</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-[#e7ebf3] dark:bg-gray-800">
+<div class="text-text-secondary dark:text-gray-400 flex border-none items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-main dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-text-secondary px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search products..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#e7ebf3] dark:bg-gray-800 text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#e7ebf3] dark:bg-gray-800 text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5 px-4 md:px-10 lg:px-20 xl:px-40">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 p-4 pl-0">
+<a class="text-text-secondary dark:text-gray-400 text-sm md:text-base font-medium leading-normal hover:underline" href="#">Home</a>
+<span class="text-text-secondary dark:text-gray-400 text-sm md:text-base font-medium leading-normal">/</span>
+<a class="text-text-secondary dark:text-gray-400 text-sm md:text-base font-medium leading-normal hover:underline" href="#">Apparel</a>
+<span class="text-text-secondary dark:text-gray-400 text-sm md:text-base font-medium leading-normal">/</span>
+<span class="text-text-main dark:text-white text-sm md:text-base font-medium leading-normal">Hoodies</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between gap-3 p-4 pl-0 pb-6">
+<div class="flex min-w-72 flex-col gap-3">
+<h1 class="text-text-main dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Premium Hoodies</h1>
+<p class="text-text-secondary dark:text-gray-400 text-base font-normal leading-normal">Minimalist styles for every season. Quality cotton blends.</p>
+</div>
+</div>
+<!-- Filters & Sort -->
+<div class="sticky top-[65px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-2 mb-6 border-b border-border-light dark:border-gray-800">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<!-- Filter Chips -->
+<div class="flex gap-3 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 border border-border-light dark:border-gray-700 pl-4 pr-3 hover:border-primary transition-colors group">
+<p class="text-text-main dark:text-white text-sm font-medium leading-normal">Gender: All</p>
+<span class="material-symbols-outlined text-text-main dark:text-white text-lg group-hover:text-primary">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 border border-border-light dark:border-gray-700 pl-4 pr-3 hover:border-primary transition-colors group">
+<p class="text-text-main dark:text-white text-sm font-medium leading-normal">Size</p>
+<span class="material-symbols-outlined text-text-main dark:text-white text-lg group-hover:text-primary">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 border border-border-light dark:border-gray-700 pl-4 pr-3 hover:border-primary transition-colors group">
+<p class="text-text-main dark:text-white text-sm font-medium leading-normal">Color</p>
+<span class="material-symbols-outlined text-text-main dark:text-white text-lg group-hover:text-primary">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 border border-border-light dark:border-gray-700 pl-4 pr-3 hover:border-primary transition-colors group">
+<p class="text-text-main dark:text-white text-sm font-medium leading-normal">Price</p>
+<span class="material-symbols-outlined text-text-main dark:text-white text-lg group-hover:text-primary">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-transparent text-primary pl-2 pr-2 hover:bg-primary/10 transition-colors">
+<p class="text-sm font-bold leading-normal">Clear All</p>
+</button>
+</div>
+<!-- Result Count & Sort -->
+<div class="flex items-center justify-between md:justify-end gap-4 min-w-[200px]">
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal">24 Results</p>
+<button class="flex items-center gap-2 text-text-main dark:text-white font-medium text-sm">
+                                    Sort by: Recommended
+                                    <span class="material-symbols-outlined text-lg">sort</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 pb-10">
+<!-- Product Card 1 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 aspect-[3/4] isolate">
+<img alt="Man wearing a plain white hoodie outdoors" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Man wearing a plain white hoodie outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-BP7tTUJGIoE0hkyv-lHD-YRhvCj0203eKnNpUUwwwKRFMWbeauignsOF_fIyr8SzJBPCfD0ZmGGQn2-bqLm2foaZAfVn4c2ZWlMtQ58Z7L0CS1m6d-JSyfdlXvzm73RGCt7RqNNYSGBPPGX9tX86vpxA8DJR3kH52iTlzl0mSlouFNybrWT0sp3DlVfgaUqFp3S1RwYdLxkVb437tK_OyhAZIwvlLS0b3fTanFTdgk0dlKKqKXn3nGAwJ7EnDnnnN3TpHXrFKUI"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+<button class="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-text-main dark:text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+<span class="absolute top-3 left-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-text-main dark:text-white">New</span>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400">Men</p>
+<h3 class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Classic Essential Hoodie</h3>
+</div>
+<p class="text-base font-bold text-text-main dark:text-white">$45.00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<div class="w-4 h-4 rounded-full bg-[#f5f5f5] border border-gray-300" title="White"></div>
+<div class="w-4 h-4 rounded-full bg-[#1a1a1a] border border-gray-300" title="Black"></div>
+<div class="w-4 h-4 rounded-full bg-[#3b82f6] border border-gray-300" title="Blue"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 aspect-[3/4] isolate">
+<img alt="Woman in oversized beige hoodie posing" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Woman in oversized beige hoodie posing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiYSCGAo6zbKtbt7b-ruwN-JOyGxTPFT_tLjpNnrJz66UtQfmM89iQcI_Lw2_3P2BKcDJdGaemMedDy9j6zWrSNf_Ev8Xeqf1AOlX7mMA7JDHeGKnv37w_zfwiyZLsvqnK556-buvs4ECbPiN7BzUd366jyMWQ83fZyXNu2hTlIC9TEijRNG55n4g6yngAl_0jxpEbLSrDRc1qqugemJhD3NKBi7oepF4H3uxHoInedfxcXn-jmCELZWGNUCctGB2CDxmVpPvpx64"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+<button class="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-text-main dark:text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400">Women</p>
+<h3 class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Oversized Fleece Pullover</h3>
+</div>
+<p class="text-base font-bold text-text-main dark:text-white">$59.00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<div class="w-4 h-4 rounded-full bg-[#d2b48c] border border-gray-300" title="Beige"></div>
+<div class="w-4 h-4 rounded-full bg-[#e5e7eb] border border-gray-300" title="Light Grey"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 aspect-[3/4] isolate">
+<img alt="Dark blue hoodie folded neatly" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Dark blue hoodie folded neatly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG_nNdd6gHM1DsabhR8ZBwPX28SFgjcOSfpZ-5nil8YgbmVxlVj6Ctv6rQinY4V4YQEE1FURE1mt5aAt3FaCbJO34R3BwZudOoKQs0NKOMMQMF9bGwZUOg6DsStuTPxKrViaqPJ4_x5Qurl1aa0UvAF4I_bTBNruI7l33JkoN6zrq5FHMTYyQpm9b8KWqs8IT8aJ5uxWCSYIlGGmzBBYJFS1mN7oV0bQGjI8Q1AEsEhKSbX41uI-_lJ-xg-aBjnERXgdzsFp5xQ34"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+<button class="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-text-main dark:text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+<span class="absolute top-3 left-3 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">-20%</span>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400">Unisex</p>
+<h3 class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Tech-Knit Sport Hoodie</h3>
+</div>
+<div class="text-right">
+<p class="text-base font-bold text-red-500">$68.00</p>
+<p class="text-xs text-text-secondary dark:text-gray-500 line-through">$85.00</p>
+</div>
+</div>
+<div class="flex gap-2 mt-2">
+<div class="w-4 h-4 rounded-full bg-[#1e3a8a] border border-gray-300" title="Navy"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 aspect-[3/4] isolate">
+<img alt="Woman wearing yellow hoodie fashion shot" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Woman wearing yellow hoodie fashion shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApRnp4MSCg7CwmRZrsggTzkzXuf0a9uXmfhqeG-TFwNxqotF77ZLeFFyatdwUlMvpBagP2r_0e9s9k9Wk3zcW3yLl-Jkdjm_qvTH0-INPzxF2lql5EaVI8huG_EOLAYtpBKhBRH_RlvNW65ihXiVAgCb0JPrUJWe_o7OgWIW4pSWsPRCb-Nskupc9pFRZ_nw9twnRcZYUAdlljq6cNGxH-lYCpdE9LlA8wuMRrFddC4MLIDYNGMUVLyS2tE9JPCnXPJopPrcBDN5U"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+<button class="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-text-main dark:text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400">Women</p>
+<h3 class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Sunburst Yellow Crop</h3>
+</div>
+<p class="text-base font-bold text-text-main dark:text-white">$49.00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<div class="w-4 h-4 rounded-full bg-[#facc15] border border-gray-300" title="Yellow"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 aspect-[3/4] isolate">
+<img alt="Person in black hoodie back view" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Person in black hoodie back view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjnwLOpXNdPbV9mv_6RVq68yJ4T3twjGwhYneg9klJZhRh4rpuBEEpN5fBotRRIYi2qW0YQ2W9Oc2UQ5hSod3jU1a_FavK9IvTx7b55B_VeUgRDE3kWFGcHJ34w1AjikvqNsVg0wFESRXnZEc8JAOyLLF8W66rkcYjFf9WgPR4GOuYKGoqIyIu3risKDhxkiLwxHHUCwRw_KYeGmnhJJhVIjJ0RNCyRBcxVy2yCwgzpxSzkZPEVk4_-Z0yvPZOQxsNHgrlZcJBdog"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+<button class="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-text-main dark:text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400">Men</p>
+<h3 class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Midnight Streetwear</h3>
+</div>
+<p class="text-base font-bold text-text-main dark:text-white">$75.00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<div class="w-4 h-4 rounded-full bg-black border border-gray-300" title="Black"></div>
+<div class="w-4 h-4 rounded-full bg-gray-500 border border-gray-300" title="Grey"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 aspect-[3/4] isolate">
+<img alt="Plain white hoodie flat lay on white background" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Plain white hoodie flat lay on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4AN16aDBZ1PaRFBi8EWxr6CGDoqqRMRElEw0R28xN7JgJcOYr0ynFm9Mnl9Nc08SC5VRlODyxiEecGjbZjqzlFeWYvexYwkxYGgie9vFLgMMVWre9vSTJsGeTZLPVsG82evHK59MbkolhB46wpRgasdj-K_3RAnFybAU9YWGlzRoX6_wMz6Ee3e2hV1zVM0RrA1EZxrPKRHiXEWx3xoSKu8sEaY26MI3_cb_a6qLOxl5TPJ_gazqy9_Mi9OHkdkTBo0KMlcdiedQ"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+<button class="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-text-main dark:text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400">Kids</p>
+<h3 class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Junior Cotton Blend</h3>
+</div>
+<p class="text-base font-bold text-text-main dark:text-white">$35.00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<div class="w-4 h-4 rounded-full bg-white border border-gray-300" title="White"></div>
+<div class="w-4 h-4 rounded-full bg-blue-400 border border-gray-300" title="Blue"></div>
+<div class="w-4 h-4 rounded-full bg-pink-400 border border-gray-300" title="Pink"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 aspect-[3/4] isolate">
+<img alt="Man in light grey hoodie close up" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Man in light grey hoodie close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMiMfCJ9_AYaVahL5CsIK6h6FZu3DxBn6k0c4WLbI3hrqnfvPe_Zj04IH9u1hx5DEarVPBf0gvdo4t-dCxu6E6PovWVxpU_NhZmh7bNu7EnT1dE3sWebU39EAU_qCVkwN5NFFMpDjHYJQtzz93g29qRFsp_aDORGTmdv7hYjy1vSqyQhI3c_HBBczV6b9OU7E5MlIyflqL-2NAzsmcPAaR2h5xZiD3Stira0TkvZCksR4nfUfF2iFoLz3h5qxB75qPqaeg92OPTnY"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+<button class="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-text-main dark:text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400">Men</p>
+<h3 class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Heather Grey Standard</h3>
+</div>
+<p class="text-base font-bold text-text-main dark:text-white">$55.00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<div class="w-4 h-4 rounded-full bg-gray-400 border border-gray-300" title="Grey"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 aspect-[3/4] isolate">
+<img alt="Stack of folded colorful hoodies" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Stack of folded colorful hoodies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs2IUDNBYl5reRtbcRppesTINyP6pPAJcjcaB_tPW3uxE5w2OfPYjYuuKe0Q7xQeSbbM_pR_0u61T5qOepHUocY149EjmYDT8_j0kNRND8BBlbcmuFE8ygGRrAEMv2TKsGdsSaVyDo3IQgufEojrp4z5d7jpezCJEuUq5NGPDN53BWxa2fjjBvAzZYRS78uqp6fS8AUWnjaFtCwt9Lug2UtFHIgAaU8hBMTLjiiAmk9Fwe7o1KgY-k1_h_bIJpv9bTBWTaq-DJdZ4"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300"></div>
+<button class="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center text-text-main dark:text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary hover:text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-secondary dark:text-gray-400">Accessories</p>
+<h3 class="text-base font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Hoodie Multipack (3pc)</h3>
+</div>
+<p class="text-base font-bold text-text-main dark:text-white">$120.00</p>
+</div>
+<div class="flex gap-2 mt-2">
+<div class="w-4 h-4 rounded-full bg-gradient-to-br from-red-500 to-blue-500 border border-gray-300" title="Multi"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center pb-10">
+<button class="flex items-center gap-2 rounded-lg bg-[#e7ebf3] dark:bg-gray-800 text-text-main dark:text-white px-6 py-3 font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                            Load More
+                            <span class="material-symbols-outlined text-sm">refresh</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#1a202c] border-t border-border-light dark:border-gray-800 pt-16 pb-8 px-10">
+<div class="layout-content-container max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="flex items-center gap-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined text-primary">checkroom</span>
+<h2 class="text-lg font-bold">Trang Fashion</h2>
+</div>
+<p class="text-text-secondary dark:text-gray-400 text-sm leading-relaxed">
+                        Designed for the modern minimalist. High quality materials, sustainable practices, and timeless designs for men, women, and children.
+                    </p>
+<div class="flex gap-4 mt-2">
+<a class="text-text-secondary dark:text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-text-secondary dark:text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="flex flex-wrap gap-10 md:gap-20">
+<div class="flex flex-col gap-3">
+<h4 class="text-text-main dark:text-white font-bold text-sm uppercase tracking-wider">Shop</h4>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">New Arrivals</a>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Men</a>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Women</a>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Kids</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-text-main dark:text-white font-bold text-sm uppercase tracking-wider">Help</h4>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Shipping &amp; Returns</a>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Size Guide</a>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Contact Us</a>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">FAQ</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-text-main dark:text-white font-bold text-sm uppercase tracking-wider">Company</h4>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Our Story</a>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Sustainability</a>
+<a class="text-text-secondary dark:text-gray-400 text-sm hover:text-primary" href="#">Careers</a>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-border-light dark:border-gray-800 text-center">
+<p class="text-text-secondary dark:text-gray-500 text-sm">© 2024 Trang Fashion. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

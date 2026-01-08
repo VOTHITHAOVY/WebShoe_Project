@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "name": "Air Runner Pro",
+    "img": "/Myproject/src/assets/img/Air-Runner-pro.png",
+    "price": "3,000,000đ",
+    "page":"/Myproject/src/product/Air-runner-pro.html"
+  },
+  {
+    "id": 2,
+    "name": "Nike Cortez Leather",
+    "img": "/Myproject/src/assets/img/Nike-Cortez-Leather.png",
+    "price": "3,519,000đ",
+    "page":"/Myproject/src/product/Nike-Cortez-Leather.html"
+  },
+  {
+    "id": 3,
+    "name": "Nike Cortez SE",
+    "img": "/Myproject/src/assets/img/Nike-Cortez-SE.png",
+    "price": "2,343,200đ",
+    "page":"/Myproject/src/product/Nike-Cortez-SE.html"
+  },
+  {
+    "id": 4,
+    "name": "Nike Air Max Moto 2K",
+    "img": "/Myproject/src/assets/img/Nike-Air-Max-Moto2k-1.png",
+    "price": "4,699,000đ",
+    "page":"/Myproject/src/product/Nike-Air-Max-Moto-2k.html"
+  },
+  {
+    "id": 5,
+    "name": "Nike Killshot 2 Premium",
+    "img": "/Myproject/src/assets/img/Nike-Killshot-2-Premium-1.png",
+    "price": "2,343,200đ",
+    "page":"/Myproject/src/product/Nike-Kill-shot.html"
+  },
+  {
+    "id": 6,
+    "name": "NikeCourt Lite 4",
+    "img": "/Myproject/src/assets/img/NikeCourt-Lite-4-1.png",
+    "price": "2,343,200đ",
+    "page":"/Myproject/src/product/NikeCourt-Lite-4.html"
+  },
+  {
+    "id": 7,
+    "name": "Áo Thun Premium Cotton",
+    "img": "/Myproject/src/assets/img/Aothuntrang-3.png",
+    "price": "350.000đ",
+    "page":"/Myproject/src/product/Áo-thun-trắng.html"
+  },
+  {
+    "id": 8,
+    "name": "Hoodie Basic Xám",
+    "img": "/Myproject/src/assets/img/Hoodie-basic-xam-1.png",
+    "price": "480.000đ",
+    "page":"/Myproject/src/product/Hoodie-Basic-Xám.html"
+  },
+  {
+    "id": 9,
+    "name": "Quần Kaki",
+    "img": "/Myproject/src/assets/img/Kaki-pant-1.png",
+    "price": "850.000đ",
+    "page":"/Myproject/src/product/Kaki.html"
+  },
+  {
+    "id": 10,
+    "name": "Nike Air Zoom Pegasus",
+    "img": "/Myproject/src/assets/img/Zoom-Pegasus-1.png",
+    "price": "2.890.000đ",
+    "page":"/Myproject/src/product/Female-product/Shoes-Female/Zoom-Pegasus.html"
+  },
+  {
+    "id": 11,
+    "name": "Áo Thun Cotton Basic",
+    "img": "/Myproject/src/assets/img/Ao-thun-nu-1.png",
+    "price": "350.000đ",
+    "page":"/Myproject/src/product/Female-product/Shoes-Female/Ao-Thun-Basic.html"
+  },
+  {
+    "id": 12,
+    "name": "Hoodie Trắng",
+    "img": "/Myproject/src/assets/img/Hoddie-Trang-1.png",
+    "price": "550.000đ",
+    "page":"/Myproject/src/product/Female-product/Shoes-Female/Hoddie-Trang.html"
+  },
+  {
+    "id": 13,
+    "name": "Sneaker Trắng Cổ Điển",
+    "img": "/Myproject/src/assets/img/Sneaker-white-1.png",
+    "price": "1.250.000đ",
+    "page":"/Myproject/src/product/Female-product/Shoes-Female/Sneaker-Trang.html"
+  }
+
+]
