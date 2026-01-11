@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Giày Nam Nike - Azces Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="../../../public/js/Male.js" defer></script>
+<link rel="icon" href="../../../public/img/Mainlogo.png">
+<link rel="stylesheet" href="../../../public/css/Male.css">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#101622",
+                        "text-main": "#0d121b",
+                        "text-secondary": "#4c669a",
+                        "surface-light": "#f6f6f8",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-[#e7ebf3] bg-background-light dark:bg-background-dark">
+<div class="px-6 md:px-10 py-3 flex items-center justify-between max-w-[1440px] mx-auto w-full">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-3 text-text-main group" href="../../../index.html">
+<div class="size-8 text-text-main">
+<!-- Logo Icon -->
+<img src="../../../public/img/Mainlogo.png" class="w-full h-full text-text-main dark:text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+</div>
+<div class="My-store">Azces Store</div>
+</a>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors border-b-2 border-primary py-1" href="../Male-product.html">Nam</a>
+<a class="text-text-main dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors py-1" href="../Female-product.html">Nữ</a>
+<a class="text-text-main dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors py-1" href="../Kids-product.html">Trẻ em</a>
+<a class="text-text-main dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors py-1" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64 group">
+<div class="relative w-80" style="margin-left:-30%;">
+                <!-- input search -->
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search......"
+                  class="w-full h-10 pl-4 pr-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-slate-900 dark:text-white outline-none"
+                />
+                <!-- icon search -->
+                <button class="absolute right-2 top-1/2 -translate-y-1/2 text-white">
+                  <span class="material-symbols-outlined text-[20px]">search</span>
+                </button>
+              
+                <!-- box kết quả -->
+                <div
+                  id="searchResult"
+                  class="absolute top-12 left-0 w-full bg-white dark:bg-gray-900 shadow-lg rounded-lg hidden z-50 max-h-72 overflow-y-auto"
+                ></div>
+              </div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 hover:bg-surface-light dark:hover:bg-gray-800 text-text-main dark:text-white transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-primary text-white text-[10px] font-bold px-1 rounded-full h-3.5 flex items-center justify-center">2</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 hover:bg-surface-light dark:hover:bg-gray-800 text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button class="md:hidden flex items-center justify-center rounded-lg h-10 w-10 hover:bg-surface-light dark:hover:bg-gray-800 text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 py-5">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 py-4">
+<a class="text-text-secondary text-sm font-medium hover:text-primary hover:underline" href="../../../index.html">Trang chủ</a>
+<span class="text-text-secondary text-sm font-medium">/</span>
+<a class="text-text-secondary text-sm font-medium hover:text-primary hover:underline" href="../Male-product.html">Nam</a>
+<span class="text-text-secondary text-sm font-medium">/</span>
+<a class="text-text-secondary text-sm font-medium hover:text-primary hover:underline" href="../Male-product/Giay-Nam.html">Giày</a>
+<span class="text-text-secondary text-sm font-medium">/</span>
+<span class="text-text-main dark:text-white text-sm font-medium">Nike</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 pt-2 border-b border-[#e7ebf3] mb-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-text-main dark:text-white text-3xl md:text-4xl font-black uppercase tracking-[-0.033em]">Giày Nam Nike</h1>
+<p class="text-text-secondary text-base font-normal">125 sản phẩm</p>
+</div>
+<!-- Mobile Filter Toggle (Visible only on small screens) -->
+<div class="md:hidden">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-gray-800 rounded-lg text-sm font-medium w-full justify-between">
+<span>Bộ lọc &amp; Sắp xếp</span>
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Sorting Dropdown (Desktop) -->
+<div class="hidden md:flex items-center gap-3">
+<span class="text-sm text-text-secondary">Sắp xếp theo:</span>
+<div class="relative group">
+<button class="flex items-center gap-2 text-sm font-bold text-text-main dark:text-white hover:text-primary">
+                        Mới nhất
+                        <span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex gap-10 items-start">
+<!-- Sidebar Filters (Desktop) -->
+<aside class="hidden md:flex flex-col w-64 shrink-0 gap-8 sticky top-24">
+<!-- Category Filter -->
+<div class="flex flex-col gap-4">
+<h3 class="text-text-main dark:text-white font-bold text-lg">Danh mục</h3>
+<div class="flex flex-col gap-2 pl-1">
+<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Lifestyle</a>
+<a class="text-text-secondary text-sm hover:text-primary transition-colors" href="#">Chạy bộ</a>
+<a class="text-text-secondary text-sm hover:text-primary transition-colors" href="#">Jordan</a>
+<a class="text-text-secondary text-sm hover:text-primary transition-colors" href="#">Bóng rổ</a>
+<a class="text-text-secondary text-sm hover:text-primary transition-colors" href="#">Bóng đá</a>
+<a class="text-text-secondary text-sm hover:text-primary transition-colors" href="#">Tập luyện &amp; Gym</a>
+</div>
+</div>
+<hr class="border-t border-[#e7ebf3]"/>
+<!-- Price Filter -->
+<div class="flex flex-col gap-4">
+<h3 class="text-text-main dark:text-white font-bold text-lg">Giá</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-5 h-5 rounded border border-gray-300 dark:border-gray-600 flex items-center justify-center group-hover:border-primary">
+<!-- Checkbox logic would go here, simulated checked state -->
+</div>
+<span class="text-sm text-text-secondary group-hover:text-text-main">Dưới 2.000.000₫</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-5 h-5 rounded border border-gray-300 dark:border-gray-600 flex items-center justify-center bg-primary border-primary">
+<span class="material-symbols-outlined text-white text-[16px]">check</span>
+</div>
+<span class="text-sm text-text-main font-medium dark:text-white">2.000.000₫ - 5.000.000₫</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="w-5 h-5 rounded border border-gray-300 dark:border-gray-600 flex items-center justify-center group-hover:border-primary"></div>
+<span class="text-sm text-text-secondary group-hover:text-text-main">Trên 5.000.000₫</span>
+</label>
+</div>
+</div>
+<hr class="border-t border-[#e7ebf3]"/>
+<!-- Size Filter -->
+<div class="flex flex-col gap-4">
+<h3 class="text-text-main dark:text-white font-bold text-lg">Kích cỡ</h3>
+<div class="grid grid-cols-3 gap-2">
+<button class="h-10 border border-[#e7ebf3] dark:border-gray-700 rounded hover:border-primary hover:text-primary text-sm font-medium text-text-main dark:text-gray-300 transition-all bg-white dark:bg-transparent">38</button>
+<button class="h-10 border border-[#e7ebf3] dark:border-gray-700 rounded hover:border-primary hover:text-primary text-sm font-medium text-text-main dark:text-gray-300 transition-all bg-white dark:bg-transparent">39</button>
+<button class="h-10 border border-[#e7ebf3] dark:border-gray-700 rounded hover:border-primary hover:text-primary text-sm font-medium text-text-main dark:text-gray-300 transition-all bg-white dark:bg-transparent">40</button>
+<button class="h-10 bg-[#cee6eb] text-black border border-text-main rounded text-sm font-medium transition-all  ">41</button>
+<button class="h-10 border border-[#e7ebf3] dark:border-gray-700 rounded hover:border-primary hover:text-primary text-sm font-medium text-text-main dark:text-gray-300 transition-all bg-white dark:bg-transparent">42</button>
+<button class="h-10 border border-[#e7ebf3] dark:border-gray-700 rounded hover:border-primary hover:text-primary text-sm font-medium text-text-main dark:text-gray-300 transition-all bg-white dark:bg-transparent">43</button>
+<button class="h-10 border border-[#e7ebf3] dark:border-gray-700 rounded hover:border-primary hover:text-primary text-sm font-medium text-text-main dark:text-gray-300 transition-all bg-white dark:bg-transparent">44</button>
+<button class="h-10 border border-[#e7ebf3] dark:border-gray-700 rounded opacity-50 cursor-not-allowed text-sm font-medium text-text-secondary transition-all bg-surface-light dark:bg-gray-800">45</button>
+</div>
+</div>
+<hr class="border-t border-[#e7ebf3]"/>
+<!-- Color Filter -->
+<div class="flex flex-col gap-4">
+<h3 class="text-text-main dark:text-white font-bold text-lg">Màu sắc</h3>
+<div class="flex flex-wrap gap-3">
+<button class="size-8 rounded-full bg-black" id="color1" data-color="black"></button>
+<button class="size-8 rounded-full bg-white border border-gray-300" id="color2" data-color="white"></button>
+<button class="size-8 rounded-full bg-[#1977bf] border border-transparent" id="color3" data-color="blue"></button>
+<button class="size-8 rounded-full bg-red-600 border border-transparent" id="color4" data-color="red"></button>
+<button class="size-8 rounded-full bg-pink-600 border border-transparent" id="color5" data-color="pink"></button>
+<button class="size-8 rounded-full bg-orange-600 border border-transparent" id="color6" data-color="yellow-orange"></button>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1" id="Container">
+<!-- Quick Filters Chips (Horizontal) -->
+<div class="flex gap-3 mb-6 overflow-x-auto pb-2 scrollbar-hide">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-text-main dark:bg-white text-white dark:text-black pl-4 pr-3 transition-colors">
+<p class="text-sm font-medium leading-normal">Kích cỡ: 41</p>
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[#e7ebf3] hover:border-primary dark:border-gray-700 bg-transparent pl-4 pr-3 transition-colors group">
+<p class="text-text-main dark:text-white text-sm font-medium leading-normal group-hover:text-primary">Air Max</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[#e7ebf3] hover:border-primary dark:border-gray-700 bg-transparent pl-4 pr-3 transition-colors group">
+<p class="text-text-main dark:text-white text-sm font-medium leading-normal group-hover:text-primary">Pegasus</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full border border-[#e7ebf3] hover:border-primary dark:border-gray-700 bg-transparent pl-4 pr-3 transition-colors group">
+<p class="text-text-main dark:text-white text-sm font-medium leading-normal group-hover:text-primary">Màu đen</p>
+</button>
+<button class="text-sm text-text-secondary underline decoration-1 underline-offset-2 hover:text-primary ml-auto whitespace-nowrap">Xóa bộ lọc</button>
+</div>
+<div class="product-grid grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-6 gap-y-10">
+<!-- Product Card 1 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="white">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/Air-Force-1.html"><img src="../../../public/img/Air-force-1-4.png" class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Air Force 1 07 low top sneaker in white"></a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-white dark:bg-black text-xs font-bold px-2 py-1 rounded text-text-main dark:text-white">
+                                Best Seller
+                            </div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Air Force 1 '07</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">2.929.000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="black">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/Nike-Air-Max-90.html">
+  <img src="../../../public/img/Air-Max-90-1.png" class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Air Max 90 men's sneaker in black and grey">
+</a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Air Max 90</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">3.519.000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="brown">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/Nike-Dunk-Low-Retro.html">
+  <img data-color="brown" src="../../../public/img/Dunk-low-retro-se-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Dunk Low Retro men's sneaker in black and white panda colorway">
+</a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Dunk Low Retro</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">3.519.000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="white">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/Nike-Pegasus-41.html">
+  <img data-color="white" src="../../../public/img/Nike-Pegasus-41-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Pegasus 40 running shoe in bright blue">
+</a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">
+                                Mới
+                            </div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Pegasus 41</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Chạy Bộ Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">3.829.000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="blue">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/NIke-Dn8.html">
+  <img data-color="blue" src="../../../public/img/Max-Dn8-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Air VaporMax 2023 Flyknit shoe in black">
+</a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Air Max Dn8 SE</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">5,589,000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="pink">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/Nike-Mecton-10.html">
+  <img data-color="pink" src="../../../public/img/Mecton-10-1.png" class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Metcon 9 workout shoes in red and black">
+</a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Metcon 10</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Tập Luyện Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">4,409,000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="white">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/Mid-77-Vintage.html">
+  <img data-color="white" src="../../../public/img/Vintage-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Blazer Mid 77 vintage shoes in white">
+</a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Blazer Mid '77 Vintage</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">2.499.000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="red">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/Nike-Jordan-1-Low.html">
+  <img data-color="red" src="../../../public/img/Jordan-1-Low-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Air Jordan 1 low in red and white">
+</a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-text-main text-white text-xs font-bold px-2 py-1 rounded">
+                                Sắp hết hàng
+                            </div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Air Jordan 1 Low</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">3.239.000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 9 -->
+<div class="product-image flex flex-col gap-4 group cursor-pointer" data-color="black">
+<div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+<a href="../Male-product/Shoes-Male/Pegasus-Pre-SE.html">
+  <img data-color="black" src="../../../public/img/Pegasus-Pre-1.png" class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Nike Invincible 3 running shoe in grey" style="background-image: url('https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/92842d2d-7ed2-423e-9e9c-bb8edc592a87/W+NIKE+PEGASUS+PREMIUM+SE.png');">
+</a>
+<button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Pegasus Premium SE</h3>
+<p class="text-text-secondary text-sm font-normal">Giày Chạy Bộ Nam</p>
+<div class="flex items-center gap-2 mt-1">
+<p class="text-text-main dark:text-white text-base font-medium">6,459,000₫</p>
+</div>
+</div>
+</div>
+<!-- Product Card 10 -->
+<div class="product-card hidden" data-color="pink" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Tatum-4-PF.html">
+      <img src="../../../public/img/Tatum4-PF-1.png" class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Tatum 4 PF</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Bống Rổ</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">3,669,000₫</p>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 11 -->
+<div class=" product-card hidden" data-color="black" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Jordan-11-Retro-Gamma.html">
+      <img src="../../../public/img/Retro-gamma-1.png" class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Air Jordan 11 Retro 'Gamma'</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">6,609,000₫</p>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card 12 -->
+<div class=" product-card hidden" data-color="black">
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Jordan-Franchise.html">
+      <img  src="../../../public/img/Franchise-1.png" class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Jordan Franchise</h3>
+    <p class="text-text-secondary text-sm font-normal">Dép</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">889,000₫</p>
+    </div>
+  </div>
+</div>
+<!-- Product Card 13 -->
+<div class=" product-card hidden" data-color="yellow-orange" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Jordan-Mule.html">
+      <img src="../../../public/img/Jordan-mule-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Air Jordan Mule</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Đánh Golf</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">2,929,000₫</p>
+    </div>
+  </div>
+</div>
+
+  <!-- Product Card 14 -->
+<div class=" product-card hidden" data-color="yellow-orange" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Luka-77-PF.html">
+      <img src="../../../public/img/Luka77-1.png" class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Luka .77 PF</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Bống Rổ</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">2,929,000₫</p>
+    </div>
+  </div>
+</div>
+<!-- Product Card 15 -->
+ <div class="product-card hidden" data-color="white" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Jordan-ADG-5.html">
+      <img src="../../../public/img/Jordan-ADG-5-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Jordan ADG 5</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Đánh Golf</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">5,589,000₫</p>
+    </div>
+  </div>
+</div>
+<!--Product Card 16-->
+ <div class="product-card hidden" data-color="white" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Shox-R4.html">
+      <img src="../../../public/img/Shox-R4-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Shox R4</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">4,409,000₫</p>
+    </div>
+  </div>
+</div>
+<!--Product Card 17-->
+ <div class="product-card hidden" data-color="black" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Shox-TL.html">
+      <img src="../../../public/img/Shox-Tl-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Shox TL</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">3,999,000₫</p>
+    </div>
+  </div>
+</div>
+<!--Product Card 18-->
+ <div class="product-card hidden" data-color="black" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Shox-Ride-2.html">
+      <img src="../../../public/img/Shox-Ride-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Shox Ride 2</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">3,999,000₫</p>
+    </div>
+  </div>
+</div>
+<!--Product Card 19-->
+ <div class="product-card hidden" data-color="blue" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Rejuven8.html">
+      <img src="../../../public/img/Rejuven8-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike ReactX Rejuven8</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">2,069,000₫</p>
+    </div>
+  </div>
+</div>
+<!--Product Card 20-->
+ <div class="product-card hidden" data-color="blue" >
+  <div class="relative w-full bg-[#f6f6f6] dark:bg-gray-800 rounded-lg overflow-hidden aspect-square">
+    <a href="../Male-product/Shoes-Male/Ava-Rover.html">
+      <img src="../../../public/img/Ava-rover-1.png"  class="product-img absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" 
+         data-alt="Nike Invincible 3 running shoe in grey" >
+    </a>
+    <button class="absolute top-3 right-3 p-2 bg-white/80 dark:bg-black/50 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white dark:hover:bg-black text-text-main dark:text-white shadow-sm">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
+    </button>
+  </div>
+  <div class="flex flex-col gap-1">
+    <h3 class="text-text-main dark:text-white text-base font-bold leading-tight group-hover:text-primary transition-colors">Nike Ava Rover</h3>
+    <p class="text-text-secondary text-sm font-normal">Giày Nam</p>
+    <div class="flex items-center gap-2 mt-1">
+      <p class="text-text-main dark:text-white text-base font-medium">3,829,000₫</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<button id="loadMore" class="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30">
+                        Xem thêm sản phẩm
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-[#e7ebf3] bg-background-light dark:bg-background-dark pt-12 pb-8">
+<div class="max-w-[1440px] mx-auto px-6 md:px-10 flex flex-col gap-10">
+<div class="flex flex-wrap gap-12 justify-between">
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-text-main dark:text-white uppercase text-sm tracking-wide">Tìm cửa hàng</h4>
+<h4 class="font-bold text-text-main dark:text-white uppercase text-sm tracking-wide">Đăng ký thành viên</h4>
+<h4 class="font-bold text-text-main dark:text-white uppercase text-sm tracking-wide">Gửi phản hồi</h4>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-text-main dark:text-white uppercase text-sm tracking-wide">Trợ giúp</h4>
+<div class="flex flex-col gap-2">
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Trạng thái đơn hàng</a>
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Vận chuyển &amp; Giao hàng</a>
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Trả hàng</a>
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Phương thức thanh toán</a>
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Liên hệ</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-text-main dark:text-white uppercase text-sm tracking-wide">Về Nike</h4>
+<div class="flex flex-col gap-2">
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Tin tức</a>
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Nghề nghiệp</a>
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Nhà đầu tư</a>
+<a class="text-text-secondary text-xs hover:text-text-main dark:hover:text-white" href="#">Bền vững</a>
+</div>
+</div>
+<div class="flex gap-4 self-start">
+<div class="size-8 rounded-full bg-surface-light dark:bg-gray-800 flex items-center justify-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">
+<!-- Social Icon placeholder -->
+<span class="material-symbols-outlined text-[18px]">public</span>
+</div>
+<div class="size-8 rounded-full bg-surface-light dark:bg-gray-800 flex items-center justify-center cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-end md:items-center gap-4 border-t border-[#e7ebf3] dark:border-gray-800 pt-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-text-main dark:text-white">location_on</span>
+<span class="text-xs font-medium text-text-main dark:text-white">Việt Nam</span>
+<span class="text-xs text-text-secondary ml-4">© 2023 Nike, Inc. Tất cả các quyền được bảo lưu</span>
+</div>
+<div class="flex gap-6 flex-wrap">
+<a class="text-xs text-text-secondary hover:text-text-main dark:hover:text-white" href="#">Hướng dẫn</a>
+<a class="text-xs text-text-secondary hover:text-text-main dark:hover:text-white" href="#">Điều khoản sử dụng</a>
+<a class="text-xs text-text-secondary hover:text-text-main dark:hover:text-white" href="#">Điều khoản bán hàng</a>
+<a class="text-xs text-text-secondary hover:text-text-main dark:hover:text-white" href="#">Chính sách bảo mật</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+  const loadMoreBtn = document.getElementById("loadMore");
+const hiddenCards = document.querySelectorAll(".product-card.hidden");
+const showCount =3; // số sản phẩm hiển thị mỗi lần nhấn
+
+loadMoreBtn.addEventListener("click", () => {
+  // Lấy các card ẩn còn lại
+  const hidden = document.querySelectorAll(".product-card.hidden");
+  for (let i = 0; i < showCount && i < hidden.length; i++) {
+    hidden[i].classList.remove("hidden"); // hiện card
+  }
+  // Nếu không còn card ẩn, ẩn luôn nút "Xem thêm"
+  if (document.querySelectorAll(".product-card.hidden").length === 0) {
+    loadMoreBtn.style.display = "none";
+  }
+});
+</script>
+
+</body>
+</html>
