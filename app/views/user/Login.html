@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html class="light" lang="vi">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Đăng nhập - Azces Store</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Đăng nhập - Azces Store</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="icon" href="../../../public/img/Mainlogo.png">
+<link rel="stylesheet" href="../../../public/css/Login.css">
+<script src="../../../public/js/login.js"></script>
+<script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -28,108 +32,127 @@
         }
     </script>
 </head>
-<body>
-    <!-- Main Layout -->
-    <div class="flex-1 flex flex-col lg:flex-row">
-        <!-- Left Side: Login Form -->
-        <div class="flex-1 flex flex-col items-center justify-center p-6 sm:p-12 lg:p-20 bg-white dark:bg-background-dark">
-            <div class="w-full max-w-[420px] flex flex-col gap-6">
-                <!-- PageHeading Component Adapted -->
-                <div class="flex flex-col gap-2 pb-4">
-                    <h1 class="text-3xl lg:text-4xl font-black tracking-tight text-[#0d121b] dark:text-white">
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d121b] dark:text-white overflow-x-hidden flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full border-b border-[#e7ebf3] dark:border-gray-800 bg-white dark:bg-[#1a2233]">
+<div class="px-6 lg:px-10 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<!-- Custom SVG Logo tailored to Nike-style curve -->
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+</svg>
+<a href="../../../index.html">
+    <img src="../../../public/img/Mainlogo.png" alt="" class="main-logo">
+    <h2 class="text-lg font-bold tracking-tight">Azces Store</h2>
+</a>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../product/Male-product.html">Nam</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../product/Female-product.html">Nữ</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../product/Kids-product.html">Trẻ em</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Giảm giá</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<button class="hidden sm:flex h-9 px-4 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    Trợ giúp
+                </button>
+<a class="text-sm font-bold text-primary hover:underline" href="../user/Sigin.html">Đăng ký</a>
+</div>
+</div>
+</header>
+<!-- Main Layout -->
+<div class="flex-1 flex flex-col lg:flex-row">
+<!-- Left Side: Login Form -->
+<div class="flex-1 flex flex-col items-center justify-center p-6 sm:p-12 lg:p-20 bg-background-light dark:bg-background-dark">
+<div class="w-full max-w-[420px] flex flex-col gap-6">
+<!-- PageHeading Component Adapted -->
+<div class="flex flex-col gap-2 pb-4">
+<h1 class="text-3xl lg:text-4xl font-black tracking-tight text-[#0d121b] dark:text-white">
                         Chào mừng trở lại
                     </h1>
-                    <p class="text-[#4c669a] dark:text-gray-400 text-base font-normal">
+<p class="text-[#4c669a] dark:text-gray-400 text-base font-normal">
                         Đăng nhập để truy cập tài khoản và đơn hàng của bạn.
                     </p>
-                </div>
-
-                <form class="flex flex-col gap-5">
-                    <!-- TextField: Email -->
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-medium text-[#0d121b] dark:text-gray-200" for="dangnhap">Tên đăng nhập</label>
-                        <input class="w-full h-12 px-4 rounded-lg bg-white dark:bg-[#1a2233] border border-[#cfd7e7] dark:border-gray-700 text-[#0d121b] dark:text-white placeholder-[#4c669a] focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" id="email" placeholder="Nhập tên đăng nhập" type="text" required/>
-                    </div>
-
-                    <!-- TextField: Password -->
-                    <div class="flex flex-col gap-2">
-                        <div class="flex justify-between items-center">
-                            <label class="text-sm font-medium text-[#0d121b] dark:text-gray-200" for="password">Mật khẩu</label>
-                        </div>
-                        <div class="relative flex items-center">
-                            <input class="w-full h-12 px-4 pr-12 rounded-lg bg-white dark:bg-[#1a2233] border border-[#cfd7e7] dark:border-gray-700 text-[#0d121b] dark:text-white placeholder-[#4c669a] focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" id="password" placeholder="Nhập mật khẩu" type="password" required/>
-                            <button class="absolute right-4 text-[#4c669a] hover:text-[#0d121b] dark:hover:text-white transition-colors flex items-center justify-center" type="button"
-                            onclick="password.type = password.type === 'password' ? 'text' : 'password'">
-                                <span class="material-symbols-outlined text-[20px]">visibility</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- MetaText: Forgot Password & Remember Me -->
-                    <div class="flex items-center justify-between">
-                        <label class="flex items-center gap-2 cursor-pointer group">
-                            <input class="rounded border-[#cfd7e7] text-primary focus:ring-primary/30 w-4 h-4 cursor-pointer" type="checkbox"/>
-                            <span class="text-sm text-[#4c669a] dark:text-gray-400 group-hover:text-[#0d121b] dark:group-hover:text-white transition-colors">Ghi nhớ đăng nhập</span>
-                        </label>
-                        <a class="text-sm font-medium text-[#4c669a] hover:text-primary transition-colors underline decoration-transparent hover:decoration-current" href="#">
+</div>
+<form class="flex flex-col gap-5">
+<!-- TextField: Email -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-[#0d121b] dark:text-gray-200" for="email">Email hoặc Tên đăng nhập</label>
+<input class="w-full h-12 px-4 rounded-lg bg-white dark:bg-[#1a2233] border border-[#cfd7e7] dark:border-gray-700 text-[#0d121b] dark:text-white placeholder-[#4c669a] focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" id="email" placeholder="example@email.com" type="text" required/>
+</div>
+<!-- TextField: Password -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-medium text-[#0d121b] dark:text-gray-200" for="password">Mật khẩu</label>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-12 px-4 pr-12 rounded-lg bg-white dark:bg-[#1a2233] border border-[#cfd7e7] dark:border-gray-700 text-[#0d121b] dark:text-white placeholder-[#4c669a] focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" id="password" placeholder="Nhập mật khẩu" type="password" required/>
+<button class="absolute right-4 text-[#4c669a] hover:text-[#0d121b] dark:hover:text-white transition-colors flex items-center justify-center" type="button"
+onclick="password.type = password.type === 'password' ? 'text' : 'password'">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- MetaText: Forgot Password & Remember Me -->
+<div class="flex items-center justify-between">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded border-[#cfd7e7] text-primary focus:ring-primary/30 w-4 h-4 cursor-pointer" type="checkbox"/>
+<span class="text-sm text-[#4c669a] dark:text-gray-400 group-hover:text-[#0d121b] dark:group-hover:text-white transition-colors">Ghi nhớ đăng nhập</span>
+</label>
+<a class="text-sm font-medium text-[#4c669a] hover:text-primary transition-colors underline decoration-transparent hover:decoration-current" href="#">
                             Quên mật khẩu?
                         </a>
-                    </div>
-
-                    <!-- Action Buttons -->
-                    <div class="pt-2 flex flex-col gap-4">
-                        <button class="w-full h-12 rounded-full bg-primary text-white font-bold text-sm tracking-wide hover:bg-blue-700 active:scale-[0.98] transition-all shadow-lg shadow-primary/30" type="submit">
+</div>
+<!-- Action Buttons -->
+<div class="pt-2 flex flex-col gap-4">
+<button class="w-full h-12 rounded-full bg-primary text-white font-bold text-sm tracking-wide hover:bg-blue-700 active:scale-[0.98] transition-all shadow-lg shadow-primary/30" type="submit">
                             ĐĂNG NHẬP
                         </button>
-
-                        <div class="relative flex py-2 items-center">
-                            <div class="flex-grow border-t border-[#e7ebf3] dark:border-gray-700"></div>
-                            <span class="flex-shrink-0 mx-4 text-gray-400 text-xs uppercase font-bold tracking-wider">Hoặc</span>
-                            <div class="flex-grow border-t border-[#e7ebf3] dark:border-gray-700"></div>
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-3">
-                            <a href="https://accounts.google.com/o/oauth2/auth" class="h-11 flex items-center justify-center gap-2 rounded-lg border border-[#e7ebf3] dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-[#1a2233] transition-colors">
-                                <img alt="Google" class="w-5 h-5 object-contain" src="https://th.bing.com/th/id/R.0fa3fe04edf6c0202970f2088edea9e7?rik=joOK76LOMJlBPw&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fgoogle-logo-png-open-2000.png&ehk=0PJJlqaIxYmJ9eOIp9mYVPA4KwkGo5Zob552JPltDMw%3d&risl=&pid=ImgRaw&r=0"/>
-                                <span class="text-sm font-medium text-[#0d121b] dark:text-white">Google</span>
-                            </a>
-
-                            <a href="https://www.facebook.com/v12.0/dialog/oauth" class="h-11 flex items-center justify-center gap-2 rounded-lg border border-[#e7ebf3] dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-[#1a2233] transition-colors">
-                                <img alt="Facebook" class="w-5 h-5 object-contain" src="https://freepnglogo.com/images/all_img/facebook-logo.png"/>
-                                <span class="text-sm font-medium text-[#0d121b] dark:text-white">Facebook</span>
-                            </a>
-                        </div>
-                    </div>
-                </form>
-
-                <div class="text-center mt-4">
-                    <p class="text-[#0d121b] dark:text-gray-300 text-sm">
+<div class="relative flex py-2 items-center">
+<div class="flex-grow border-t border-[#e7ebf3] dark:border-gray-700"></div>
+<span class="flex-shrink-0 mx-4 text-gray-400 text-xs uppercase font-bold tracking-wider">Hoặc</span>
+<div class="flex-grow border-t border-[#e7ebf3] dark:border-gray-700"></div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="h-11 flex items-center justify-center gap-2 rounded-lg border border-[#e7ebf3] dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-[#1a2233] transition-colors" type="button">
+<img alt="Google" class="w-5 h-5" data-alt="Google Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVKot8t3Gl5P8z40XXZdlf-gjYk_W0dj_KVPg3t5-pp9vuEjUo7oKAEgNW9moFAC7pqV6EfH1i_9Xz6pmBK9MNlzfwSTkBgTs7pMpj98YaJ0uXLaWl71TWCU0BRvUp8tJYJ87va2-XGIZdnMgSy6nGreEv0nebCr7u73sx6ml3HPKvnDUAAAWSTuKbDnVdoFAWe71Dlh1-1fCF-ftfD8Ry9ThJvxltxcb5FoMCo5ncrDJoW-yOv-ecwC0EA9dpExiolIhd2iGVK84"/>
+<span class="text-sm font-medium text-[#0d121b] dark:text-white" id="loginGoogle">Google</span>
+</button>
+<button class="h-11 flex items-center justify-center gap-2 rounded-lg border border-[#e7ebf3] dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 bg-white dark:bg-[#1a2233] transition-colors" type="button">
+<img alt="Facebook" class="w-5 h-5" data-alt="Facebook Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBUq0NJM93KtK2rQa8dClxiSwW1oUAMHQdfzdzTMDtYyPk02oH94N7huEgCIgFJqDYjqjfgGx4Xhuge3kqgMJdWnOaOscQykvwp6IrUBJVITIpDB6wHrlfhH7ZxFEoPzYCIsPZ0suUq9oBnClVumraLDAYWrA9nN59ltwxtgSHWwC7jF0i-FY3KHOpRsSNbKw3nEdbeOp5QPT6ksNDcQihwYNKgCq4FuUWEKTXqmKMTfvZRTks2Gu2t9moreG1mkiGKmX2stew2TI"/>
+<span class="text-sm font-medium text-[#0d121b] dark:text-white" id="loginFacebook">Facebook</span>
+</button>
+</div>
+</div>
+</form>
+<div class="text-center mt-4">
+<p class="text-[#0d121b] dark:text-gray-300 text-sm">
                         Chưa có tài khoản? 
-                        <a class="font-bold text-primary hover:underline ml-1" href="signin1.html">Đăng ký ngay</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Side: Visual -->
-        <div class="hidden lg:flex lg:w-1/2 relative bg-gray-100 dark:bg-gray-900 overflow-hidden">
-            <!-- Using a gradient overlay to ensure text contrast if we added text, but mainly for style -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
-            
-            <!-- Lifestyle Image -->
-            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7J7MuBKZaqLgoUKOg6JrqsnnG6d4cwmqaqka_V49tBhJcgBAFjyqlgHVQ9QPK7NbCSg5Wx7-rscOSjGl_9Cew56PP3fukOxgATREb9ibr6i5NpNFGWgOmqmBD4Wl6vmhiH-h_KdmY1Q11CDpDLfFJF6ke8sszZT7Ani89TBWeim7MnEwerv2jg-kW4l3NZlIVWAXR9-IR5w5BQigLr6WzKPkWzt07tDVAYcWScDkjgPG8IyGB235YhhVzZtmAYSPvy2_B83M35aU');"></div>
-            
-            <div class="relative z-20 mt-auto p-12 w-full">
-                <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl max-w-md">
-                    <p class="text-white text-2xl font-bold leading-tight mb-2">
+                        <a class="font-bold text-primary hover:underline ml-1" href="#">Đăng ký ngay</a>
+</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Visual -->
+<div class="hidden lg:flex lg:w-1/2 relative bg-gray-100 dark:bg-gray-900 overflow-hidden">
+<!-- Using a gradient overlay to ensure text contrast if we added text, but mainly for style -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+<!-- Lifestyle Image -->
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat" data-alt="A pair of stylish Nike sneakers floating with orange laces on a dark background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7J7MuBKZaqLgoUKOg6JrqsnnG6d4cwmqaqka_V49tBhJcgBAFjyqlgHVQ9QPK7NbCSg5Wx7-rscOSjGl_9Cew56PP3fukOxgATREb9ibr6i5NpNFGWgOmqmBD4Wl6vmhiH-h_KdmY1Q11CDpDLfFJF6ke8sszZT7Ani89TBWeim7MnEwerv2jg-kW4l3NZlIVWAXR9-IR5w5BQigLr6WzKPkWzt07tDVAYcWScDkjgPG8IyGB235YhhVzZtmAYSPvy2_B83M35aU');">
+</div>
+<div class="relative z-20 mt-auto p-12 w-full">
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl max-w-md">
+<p class="text-white text-2xl font-bold leading-tight mb-2">
                         "Just Do It."
-                    </p>
-                    <p class="text-white/80 text-sm font-medium">
+                     </p>
+<p class="text-white/80 text-sm font-medium">
                         Tham gia cộng đồng để nhận ưu đãi độc quyền và các bộ sưu tập mới nhất.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+                     </p>
+</div>
+</div>
+</div>
+</div>
+</body></html>
