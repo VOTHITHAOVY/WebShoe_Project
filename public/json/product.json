@@ -117,6 +117,26 @@
     "img": "/public/img/Jean-kid-5.png",
     "price": "450.000đ",
     "page":"/app/models/Kid-Product/Kid-Cloth/Quan-Jean.html"
+  },
+  {
+    "id": 18,
+    "name": "Minimal Black Hoodie",
+    "img": "/public/img/Hoddie-Black5.png",
+    "price": "450.000đ",
+    "page":"/app/models/Sale-Product/Ao-Sale/Minimal-Black-Hoddie.html"
+  },
+  {
+    "id": 19,
+    "name": "Oversized Cotton Tee",
+    "img": "/public/img/Ao-nu-sale-1.png",
+    "price": "210.000đ",
+    "page":"/app/models/Sale-Product/Ao-Sale/Oversized-Cotton-Tee.html"
+  },{
+    "id": 20,
+    "name": "Slim Fit Chinos",
+    "img": "/public/img/Chinos-1.png",
+    "price": "450.000đ",
+    "page":"/app/models/Kid-Product/Kid-Cloth/Chinos.html"
   }
 
 ]
