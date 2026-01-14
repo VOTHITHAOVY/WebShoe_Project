@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lịch Sử Đơn Hàng - Azces Store</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
+            <div class="layout-container flex justify-center w-full">
+                <div class="px-4 md:px-10 py-3 w-full max-w-7xl flex items-center justify-between whitespace-nowrap">
+                    <div class="flex items-center gap-4 text-slate-900 dark:text-white">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-primary rounded-full"></div>
+                            <span class="text-xl font-bold">Azces Store</span>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex flex-1 justify-end gap-8">
+                        <nav class="flex items-center gap-9">
+                            <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Nam</a>
+                            <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Nữ</a>
+                            <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Trẻ em</a>
+                            <a class="text-sm font-medium text-primary" href="#">Đơn hàng</a>
+                        </nav>
+                        <div class="flex gap-2 items-center">
+                            <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-slate-900 dark:text-white transition-colors">
+                                <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+                            </button>
+                            <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-slate-900 dark:text-white transition-colors">
+                                <span class="material-symbols-outlined text-[20px]">person</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1 w-full flex flex-col items-center">
+            <div class="w-full max-w-7xl px-4 md:px-10 py-8">
+                <!-- Page Header -->
+                <div class="mb-8">
+                    <h1 class="text-slate-900 dark:text-white text-3xl font-bold mb-2">Lịch Sử Đơn Hàng</h1>
+                    <p class="text-gray-500 text-sm">Quản lý và theo dõi đơn hàng của bạn</p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex gap-4 mb-8 border-b border-gray-200 dark:border-gray-800 pb-3 overflow-x-auto">
+                    <button class="filter-tab px-4 py-2 text-sm font-medium whitespace-nowrap text-primary border-b-2 border-primary">
+                        Tất cả
+                    </button>
+                    <button class="filter-tab px-4 py-2 text-sm font-medium whitespace-nowrap text-gray-500 hover:text-primary transition-colors">
+                        Đang xử lý
+                    </button>
+                    <button class="filter-tab px-4 py-2 text-sm font-medium whitespace-nowrap text-gray-500 hover:text-primary transition-colors">
+                        Đang giao
+                    </button>
+                    <button class="filter-tab px-4 py-2 text-sm font-medium whitespace-nowrap text-gray-500 hover:text-primary transition-colors">
+                        Hoàn thành
+                    </button>
+                    <button class="filter-tab px-4 py-2 text-sm font-medium whitespace-nowrap text-gray-500 hover:text-primary transition-colors">
+                        Đã hủy
+                    </button>
+                </div>
+
+                <!-- Orders Container -->
+                <div id="orders-container">
+                    <!-- Empty State -->
+                    <div id="empty-state" class="flex flex-col items-center justify-center bg-white dark:bg-gray-900 rounded-xl p-12 md:p-16 border border-gray-100 dark:border-gray-800">
+                        <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8">
+                            <circle cx="90" cy="90" r="85" fill="#f0f4f8" stroke="#d0dce8" stroke-width="2"/>
+                            <rect x="50" y="65" width="80" height="70" rx="6" fill="white" stroke="#d0dce8" stroke-width="3"/>
+                            <rect x="65" y="85" width="50" height="10" rx="5" fill="#e8f0f8"/>
+                            <rect x="65" y="102" width="40" height="8" rx="4" fill="#e8f0f8"/>
+                            <rect x="65" y="116" width="45" height="8" rx="4" fill="#e8f0f8"/>
+                            <circle cx="120" cy="50" r="20" fill="#135bec" opacity="0.15"/>
+                            <path d="M113 50 L117 54 L127 44" stroke="#135bec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <circle cx="45" cy="130" r="12" fill="#135bec" opacity="0.1"/>
+                            <circle cx="135" cy="125" r="15" fill="#135bec" opacity="0.1"/>
+                        </svg>
+                        <h3 class="text-slate-900 dark:text-white text-2xl font-bold mb-3">Chưa có đơn hàng nào</h3>
+                        <p class="text-gray-500 text-center mb-8 max-w-md">Bạn chưa thực hiện đơn hàng nào. Hãy khám phá các sản phẩm tuyệt vời và bắt đầu mua sắm ngay!</p>
+                        <div class="flex gap-3">
+                            <a href="index.html" class="flex items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-8 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors text-slate-900 dark:text-white text-sm font-bold tracking-wide">
+                                <span class="material-symbols-outlined text-[20px]">home</span>
+                                <span>Trang chủ</span>
+                            </a>
+                            <button onclick="window.location.href='index.html'" class="flex items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-8 bg-primary hover:bg-blue-700 transition-colors text-white text-sm font-bold tracking-wide shadow-lg hover:shadow-xl">
+                                <span class="material-symbols-outlined text-[20px]">storefront</span>
+                                <span>Khám phá sản phẩm</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Orders List (Hidden by default) -->
+                    <div id="orders-list" class="hidden space-y-5"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 mt-12">
+            <div class="layout-container flex justify-center w-full">
+                <div class="w-full max-w-7xl px-4 md:px-10">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                        <div class="flex flex-col gap-4">
+                            <h4 class="text-slate-900 dark:text-white font-bold uppercase text-sm tracking-wider">Sản phẩm</h4>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Giày chạy bộ</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Giày bóng rổ</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Giày thời trang</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Phụ kiện</a>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h4 class="text-slate-900 dark:text-white font-bold uppercase text-sm tracking-wider">Hỗ trợ</h4>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Trạng thái đơn hàng</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Giao hàng & Đổi trả</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Phương thức thanh toán</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Liên hệ</a>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h4 class="text-slate-900 dark:text-white font-bold uppercase text-sm tracking-wider">Về chúng tôi</h4>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Tin tức</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Tuyển dụng</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Nhà đầu tư</a>
+                            <a class="text-gray-500 hover:text-primary text-sm" href="#">Bền vững</a>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h4 class="text-slate-900 dark:text-white font-bold uppercase text-sm tracking-wider">Mạng xã hội</h4>
+                            <div class="flex gap-4">
+                                <a class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-colors" href="#">
+                                    <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+                                </a>
+                                <a class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-colors" href="#">
+                                    <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.48 2h.165zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm5.338-3.205a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4z" fill-rule="evenodd"></path></svg>
+                                </a>
+                                <a class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-slate-900 dark:text-white hover:bg-primary hover:text-white transition-colors" href="#">
+                                    <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 dark:border-gray-800 pt-8 gap-4">
+                        <div class="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-sm">
+                            <span class="material-symbols-outlined text-[18px]">location_on</span>
+                            Việt Nam
+                        </div>
+                        <div class="flex gap-6 text-xs text-gray-500">
+                            <a class="hover:text-primary" href="#">© 2024 Azces Store, Inc.</a>
+                            <a class="hover:text-primary" href="#">Điều khoản</a>
+                            <a class="hover:text-primary" href="#">Chính sách bảo mật</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Sample orders data
+        const ordersData = [
+            {
+                id: "DH20250114001",
+                date: "10/01/2026",
+                status: "shipping",
+                statusText: "Đang giao hàng",
+                items: [
+                    {
+                        name: "Nike Cortez SE",
+                        image: "https://via.placeholder.com/100x100/e0e0e0/666?text=Nike+Cortez",
+                        info: "Giày nam - Size: 42",
+                        quantity: 1,
+                        price: "2,343,200₫"
+                    }
+                ],
+                total: "2,343,200₫"
+            },
+            {
+                id: "DH20250108002",
+                date: "05/01/2026",
+                status: "completed",
+                statusText: "Hoàn thành",
+                items: [
+                    {
+                        name: "Air Runner Pro",
+                        image: "https://via.placeholder.com/100x100/e0e0e0/666?text=Air+Runner",
+                        info: "Giày chạy bộ nam - Size: 41",
+                        quantity: 1,
+                        price: "3,000,000₫"
+                    },
+                    {
+                        name: "Nike Air Max Moto 2K",
+                        image: "https://via.placeholder.com/100x100/e0e0e0/666?text=Air+Max",
+                        info: "Giày nữ - Size: 38",
+                        quantity: 1,
+                        price: "4,699,000₫"
+                    }
+                ],
+                total: "7,699,000₫"
+            },
+            {
+                id: "DH20241228003",
+                date: "28/12/2025",
+                status: "completed",
+                statusText: "Hoàn thành",
+                items: [
+                    {
+                        name: "Nike Cortez Leather",
+                        image: "https://via.placeholder.com/100x100/e0e0e0/666?text=Cortez",
+                        info: "Giày thể thao nữ - Size: 39",
+                        quantity: 2,
+                        price: "7,038,000₫"
+                    }
+                ],
+                total: "7,038,000₫"
+            },
+            {
+                id: "DH20241215004",
+                date: "15/12/2025",
+                status: "cancelled",
+                statusText: "Đã hủy",
+                items: [
+                    {
+                        name: "Nike Killshot 2 Premium",
+                        image: "https://via.placeholder.com/100x100/e0e0e0/666?text=Killshot",
+                        info: "Giày nam - Size: 43",
+                        quantity: 1,
+                        price: "3,089,000₫"
+                    }
+                ],
+                total: "3,089,000₫"
+            }
+        ];
+
+        // Status badge styles
+        const statusStyles = {
+            shipping: "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+            completed: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300",
+            processing: "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300",
+            cancelled: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300"
+        };
+
+        // Current filter
+        let currentFilter = "all";
+
+        // Render orders
+        function renderOrders(filter = "all") {
+            const ordersList = document.getElementById("orders-list");
+            const emptyState = document.getElementById("empty-state");
+            
+            let filteredOrders = ordersData;
+            if (filter !== "all") {
+                filteredOrders = ordersData.filter(order => order.status === filter);
+            }
+
+            if (filteredOrders.length === 0) {
+                emptyState.classList.remove("hidden");
+                ordersList.classList.add("hidden");
+                return;
+            }
+
+            emptyState.classList.add("hidden");
+            ordersList.classList.remove("hidden");
+            
+            ordersList.innerHTML = filteredOrders.map(order => `
+                <div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                    <!-- Order Header -->
+                    <div class="bg-gray-50 dark:bg-gray-800/50 px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-gray-200 dark:border-gray-700">
+                        <div>
+                            <p class="text-slate-900 dark:text-white font-bold text-sm">Đơn hàng #${order.id}</p>
+                            <p class="text-gray-500 text-xs mt-1">Ngày đặt: ${order.date}</p>
+                        </div>
+                        <span class="px-4 py-1.5 rounded-full text-xs font-semibold ${statusStyles[order.status]}">
+                            ${order.statusText}
+                        </span>
+                    </div>
+                    
+                    <!-- Order Body -->
+                    <div class="p-6">
+                        <!-- Items -->
+                        <div class="space-y-4 mb-5">
+                            ${order.items.map(item => `
+                                <div class="flex gap-4">
+                                    <img src="${item.image}" alt="${item.name}" class="w-20 h-20 rounded-lg object-cover bg-gray-100 dark:bg-gray-800">
+                                    <div class="flex-1 min-w-0">
+                                        <p class="text-slate-900 dark:text-white font-semibold text-sm mb-1 truncate">${item.name}</p>
+                                        <p class="text-gray-500 text-xs mb-1">${item.info}</p>
+                                        <p class="text-gray-500 text-xs">Số lượng: x${item.quantity}</p>
+                                    </div>
+                                    <div class="text-primary font-bold text-sm">${item.price}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        
+                        <!-- Footer -->
+                        <div class="pt-5 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                            <div class="text-slate-900 dark:text-white">
+                                <span class="text-sm">Tổng tiền:</span>
+                                <span class="text-xl font-bold text-primary ml-2">${order.total}</span>
+                            </div>
+                            <div class="flex gap-2 w-full sm:w-auto">
+                                ${order.status === "shipping" ? `
+                                    <button onclick="viewOrderDetail('${order.id}')" class="flex-1 sm:flex-none px-5 py-2.5 bg-primary hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
+                                        Xem chi tiết
+                                    </button>
+                                    <button onclick="contactShop('${order.id}')" class="flex-1 sm:flex-none px-5 py-2.5 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-slate-900 dark:text-white text-sm font-medium rounded-lg transition-colors">
+                                        Liên hệ shop
+                                    </button>
+                                ` : order.status === "completed" ? `
+                                    <button onclick="buyAgain('${order.id}')" class="flex-1 sm:flex-none px-5 py-2.5 bg-primary hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
+                                        Mua lại
+                                    </button>
+                                    <button onclick="reviewOrder('${order.id}')" class="flex-1 sm:flex-none px-5 py-2.5 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-slate-900 dark:text-white text-sm font-medium rounded-lg transition-colors">
+                                        Đánh giá
+                                    </button>
+                                ` : `
+                                    <button onclick="viewOrderDetail('${order.id}')" class="flex-1 sm:flex-none px-5 py-2.5 bg-primary hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
+                                        Xem chi tiết
+                                    </button>
+                                `}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Order action functions
+        function viewOrderDetail(orderId) {
+            alert(`Xem chi tiết đơn hàng #${orderId}`);
+            // You can implement modal or redirect to detail page
+        }
+
+        function contactShop(orderId) {
+            alert(`Liên hệ shop về đơn hàng #${orderId}`);
+            // Implement contact functionality
+        }
+
+        function buyAgain(orderId) {
+            alert(`Mua lại đơn hàng #${orderId}`);
+            // Add items to cart
+        }
+
+        function reviewOrder(orderId) {
+            alert(`Đánh giá đơn hàng #${orderId}`);
+            // Show review form
+        }
+
+        // Tab filtering functionality
+        const tabs = document.querySelectorAll('.filter-tab');
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => {
+                    t.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                    t.classList.add('text-gray-500');
+                });
+                this.classList.remove('text-gray-500');
+                this.classList.add('text-primary', 'border-b-2', 'border-primary');
+                
+                // Filter logic
+                const filters = ['all', 'processing', 'shipping', 'completed', 'cancelled'];
+                currentFilter = filters[index];
+                renderOrders(currentFilter);
+            });
+        });
+
+        // Initial render - show orders by default (change to 'all' to show empty state)
+        renderOrders('all');
+    </script>
+</body>
+</html>
