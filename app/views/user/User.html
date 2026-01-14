@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tài khoản người dùng - Shoe Store</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "primary-dark": "#0e45b5",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a202c",
+                        "text-main": "#0d121b",
+                        "text-sub": "#4c669a",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm border-b border-[#e7ebf3] dark:border-gray-800 transition-colors duration-300">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Logo & Nav Links -->
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2 group" href="#">
+<div class="size-8 text-primary transition-transform group-hover:scale-110 duration-300">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-text-main dark:text-white text-xl font-black tracking-tighter uppercase">Shoe Store</h2>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="#">New Arrivals</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="#">Men</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="#">Women</a>
+<a class="text-sm font-medium text-red-500 hover:text-red-600 transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<!-- Search -->
+<div class="hidden lg:flex items-center bg-[#f0f2f5] dark:bg-gray-800 rounded-full px-4 py-2 w-64 focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<span class="material-symbols-outlined text-gray-500 text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-text-main dark:text-white placeholder-gray-500" placeholder="Tìm kiếm sản phẩm..." type="text"/>
+</div>
+<!-- Icons -->
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors relative">
+<span class="material-symbols-outlined text-text-main dark:text-white">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">2</span>
+</button>
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-text-main dark:text-white">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="flex-grow max-w-[1280px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+<!-- Page Header -->
+<div class="mb-10">
+<h1 class="text-3xl md:text-4xl font-black text-text-main dark:text-white mb-2 tracking-tight">Tài khoản của tôi</h1>
+<p class="text-text-sub dark:text-gray-400">Quản lý thông tin cá nhân, đơn hàng và tùy chọn thanh toán.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+<!-- Sidebar Navigation -->
+<aside class="w-full lg:w-1/4 flex-shrink-0">
+<div class="sticky top-24 space-y-8">
+<!-- User Profile Summary -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm flex items-center gap-4">
+<div class="relative group cursor-pointer">
+<div class="size-16 rounded-full overflow-hidden ring-2 ring-white dark:ring-gray-700 shadow-md">
+<img alt="Avatar người dùng, nam giới cười nhẹ" class="w-full h-full object-cover" data-alt="User profile avatar image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdvmDsqZgN-YPWiRpd3YW6SwaVBXFqlZerYExZR88pUCAqcjcxLw903qF3e5wjSBksZTUEaPAZErGxpoY1MAQKqwGLXbT3wSKp2vb9xghv3DLMlyy4yf3QOTbwVpBNRZBY0so7oJM8wo-jlh3XyTao2ISRMnDjXOF9Q4n7ZJy3sj2oiUDKYJVPJ5J9h7HEGaosuhfBc2RPXBG4bWM6PhOUSU_iT6GMfpuCudodtg978_q9I0Q9QnCzlcYeA6mGp6mUyOiKsyisGRM"/>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white rounded-full p-1 border-2 border-white dark:border-surface-dark">
+<span class="material-symbols-outlined text-[12px] block">edit</span>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-text-main dark:text-white">Nguyễn Văn A</h3>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 text-xs font-semibold mt-1">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+                                Gold Member
+                            </span>
+</div>
+</div>
+<!-- Navigation Menu -->
+<nav class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex flex-col p-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary dark:text-blue-400 font-medium transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+                                Thông tin cá nhân
+                            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-sub dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-text-main dark:hover:text-white transition-colors font-medium" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                                Lịch sử đơn hàng
+                            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-sub dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-text-main dark:hover:text-white transition-colors font-medium" href="#">
+<span class="material-symbols-outlined">location_on</span>
+                                Sổ địa chỉ
+                            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-sub dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-text-main dark:hover:text-white transition-colors font-medium" href="#">
+<span class="material-symbols-outlined">credit_card</span>
+                                Phương thức thanh toán
+                            </a>
+<div class="h-px bg-gray-100 dark:bg-gray-700 my-2 mx-4"></div>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-sub dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-text-main dark:hover:text-white transition-colors font-medium" href="#">
+<span class="material-symbols-outlined">settings</span>
+                                Cài đặt tài khoản
+                            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors font-medium" href="#">
+<span class="material-symbols-outlined">logout</span>
+                                Đăng xuất
+                            </a>
+</div>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 min-w-0 space-y-8">
+<!-- Section 1: Personal Info Form -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 md:p-8">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold text-text-main dark:text-white">Thông tin cá nhân</h2>
+<button class="text-sm text-primary hover:text-primary-dark font-medium hover:underline">Chỉnh sửa</button>
+</div>
+<form action="#" class="space-y-6" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- First Name -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-main dark:text-gray-300">Họ</label>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary px-4 py-3 transition-shadow" type="text" value="Nguyễn"/>
+</div>
+<!-- Last Name -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-main dark:text-gray-300">Tên</label>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary px-4 py-3 transition-shadow" type="text" value="Văn A"/>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-main dark:text-gray-300">Email</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-gray-400 text-[20px]">mail</span>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary pl-11 pr-4 py-3 transition-shadow" type="email" value="nguyenvana@example.com"/>
+</div>
+</div>
+<!-- Phone -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-main dark:text-gray-300">Số điện thoại</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-gray-400 text-[20px]">call</span>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary pl-11 pr-4 py-3 transition-shadow" type="tel" value="0909 123 456"/>
+</div>
+</div>
+<!-- Birthday -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-main dark:text-gray-300">Ngày sinh</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-gray-400 text-[20px]">calendar_today</span>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary pl-11 pr-4 py-3 transition-shadow" type="date" value="1995-08-15"/>
+</div>
+</div>
+<!-- Gender -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-main dark:text-gray-300">Giới tính</label>
+<select class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-gray-900 text-text-main dark:text-white focus:ring-2 focus:ring-primary/20 focus:border-primary px-4 py-3 transition-shadow">
+<option selected="" value="male">Nam</option>
+<option value="female">Nữ</option>
+<option value="other">Khác</option>
+</select>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-end gap-4">
+<button class="px-6 py-2.5 rounded-lg text-text-main dark:text-white font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" type="button">Hủy bỏ</button>
+<button class="px-8 py-2.5 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold shadow-lg shadow-blue-500/30 transition-all transform active:scale-95" type="submit">Lưu thay đổi</button>
+</div>
+</form>
+</div>
+<!-- Section 2: Dashboard Overview Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Default Address -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 flex flex-col h-full">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-text-main dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">home</span>
+                                Địa chỉ mặc định
+                            </h3>
+<button class="text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+<div class="flex-grow">
+<p class="font-bold text-lg mb-1 dark:text-white">Nguyễn Văn A</p>
+<p class="text-text-sub dark:text-gray-400 text-sm leading-relaxed">
+                                (+84) 909 123 456<br/>
+                                123 Đường Nguyễn Huệ, Phường Bến Nghé<br/>
+                                Quận 1, TP. Hồ Chí Minh
+                            </p>
+</div>
+</div>
+<!-- Payment Method -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 flex flex-col h-full">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-text-main dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+                                Thanh toán
+                            </h3>
+<button class="text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<div class="flex-grow flex items-center gap-4">
+<div class="w-14 h-10 rounded bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+<img alt="Mastercard Logo" class="h-6 w-auto" data-alt="Mastercard logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvgspRd_3v7Yquu6n6BrEUJzl4Pzg8_7zE1H5TaaJ2onaaakZGkImXSqCgzWNTD8RaNYRMyCqHSKqcQ01QJgq_EUk3Qyhf-EQq3ccFfBncvOpoZYU4x1VMIk8zcNH7oQ0SalfkmcNkr8nqufLScHxMPtIfMuMq1t51_OtefKGxgRtqsnIVnkcSFRbLeE2nBLgyA8mGhL7DmBRonQSqQxJxn1MjwStOCCHiW8gadoJHAs85nH7xo1bXm5TVXNX1IBXT_hRpGkYbgho"/>
+</div>
+<div>
+<p class="font-semibold text-text-main dark:text-white">Mastercard **** 8888</p>
+<p class="text-xs text-text-sub dark:text-gray-400">Hết hạn 12/25</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Recent Orders -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden">
+<div class="p-6 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
+<h2 class="text-lg font-bold text-text-main dark:text-white">Đơn hàng gần đây</h2>
+<a class="text-primary text-sm font-medium hover:underline flex items-center gap-1" href="#">
+                            Xem tất cả
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50/50 dark:bg-gray-800/50 border-b border-gray-100 dark:border-gray-800 text-xs uppercase text-text-sub dark:text-gray-400">
+<th class="px-6 py-4 font-semibold">Mã đơn hàng</th>
+<th class="px-6 py-4 font-semibold">Ngày đặt</th>
+<th class="px-6 py-4 font-semibold">Trạng thái</th>
+<th class="px-6 py-4 font-semibold text-right">Tổng tiền</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="border-b border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="px-6 py-4 font-medium text-text-main dark:text-white">#ORD-2023-001</td>
+<td class="px-6 py-4 text-text-sub dark:text-gray-400">20 Th10, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+<span class="size-1.5 rounded-full bg-green-500"></span>
+                                            Đã giao hàng
+                                        </span>
+</td>
+<td class="px-6 py-4 text-right font-bold text-text-main dark:text-white">3.200.000₫</td>
+</tr>
+<tr class="border-b border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="px-6 py-4 font-medium text-text-main dark:text-white">#ORD-2023-002</td>
+<td class="px-6 py-4 text-text-sub dark:text-gray-400">18 Th10, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+<span class="size-1.5 rounded-full bg-blue-500"></span>
+                                            Đang vận chuyển
+                                        </span>
+</td>
+<td class="px-6 py-4 text-right font-bold text-text-main dark:text-white">1.850.000₫</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="px-6 py-4 font-medium text-text-main dark:text-white">#ORD-2023-003</td>
+<td class="px-6 py-4 text-text-sub dark:text-gray-400">15 Th10, 2023</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300">
+<span class="size-1.5 rounded-full bg-gray-500"></span>
+                                            Đã hủy
+                                        </span>
+</td>
+<td class="px-6 py-4 text-right font-bold text-text-main dark:text-white">4.500.000₫</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

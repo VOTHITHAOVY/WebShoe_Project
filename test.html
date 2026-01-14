@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="youMayLike" class="grid grid-cols-4 gap-6"></div>
+
+    <script>
+        fetch("/public/json/product.json")
+  .then(res => res.json())
+  .then(products => {
+    const CURRENT_PRODUCT_ID = 1; // 🔥 đổi theo trang hiện tại
+
+    // ❌ bỏ sản phẩm đang xem
+    const filtered = products.filter(p => p.id !== CURRENT_PRODUCT_ID);
+
+    // 🔀 shuffle mảng
+    const shuffled = filtered.sort(() => 0.5 - Math.random());
+
+    // ✂️ lấy 4 sản phẩm
+    const recommend = shuffled.slice(0, 4);
+
+    renderYouMayLike(recommend);
+  });
+function renderYouMayLike(list) {
+  const box = document.getElementById("youMayLike");
+  box.innerHTML = "";
+
+  list.forEach(item => {
+    box.innerHTML += `
+      <a href="${item.page}" class="block">
+        <div class="bg-gray-100 rounded-lg p-4">
+          <img src="${item.img}" class="w-full h-40 object-contain mb-3">
+          <h3 class="font-semibold text-sm">${item.name}</h3>
+          <p class="font-bold mt-1">${item.price}</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+    </script>
+</body>
+</html>

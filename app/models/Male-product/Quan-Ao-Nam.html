@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quần Áo Nam</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" href="../../assets/img/Mainlogo.png">
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#ffffff", 
+              "background-dark": "#101622",
+              "surface-light": "#f8f9fc",
+              "surface-dark": "#1a2233",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem", 
+              "lg": "0.5rem", 
+              "xl": "0.75rem", 
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7ebf3] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-6 lg:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#0d121b] dark:text-white cursor-pointer">
+<a href="../../../index.html">
+  <img src="../../assets/img/Mainlogo.png" alt="" class="Main-logo" style="width: 50px; height: 50px; border-radius: 20px;">
+</a>
+<a href="../../../index.html">
+    <h2 class="text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Azces Store</h2>
+</a>
+</div>
+<nav class="hidden lg:flex items-center gap-9">
+<a class="text-[#0d121b] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="../Male-product.html">Nam</a>
+<a class="text-[#0d121b] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="../Female-product.html">Nữ</a>
+<a class="text-[#0d121b] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="../Kids-product.html">Trẻ em</a>
+<a class="text-primary text-sm font-bold leading-normal hover:underline" href="#">Sale</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-4 lg:gap-8 items-center">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-transparent focus-within:border-primary/50 transition-colors">
+<div class="text-[#4c669a] flex border-none bg-[#f0f2f5] dark:bg-surface-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d121b] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] dark:bg-surface-dark focus:border-none h-full placeholder:text-[#4c669a] px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal" placeholder="Tìm kiếm sản phẩm..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#f0f2f5] dark:bg-surface-dark text-[#0d121b] dark:text-white hover:bg-[#e1e5ea] dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</button>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-[#f0f2f5] dark:bg-surface-dark text-[#0d121b] dark:text-white hover:bg-[#e1e5ea] dark:hover:bg-gray-700 transition-colors relative">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<div class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></div>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="flex-1 flex flex-col max-w-[1440px] mx-auto w-full px-6 lg:px-10 py-6">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 py-4">
+<a class="text-[#4c669a] hover:text-primary transition-colors text-sm font-medium leading-normal" href="../../../index.html">Trang chủ</a>
+<span class="text-[#4c669a] text-sm font-medium leading-normal">/</span>
+<a class="text-[#4c669a] hover:text-primary transition-colors text-sm font-medium leading-normal" href="../Male-product.html">Nam</a>
+<span class="text-[#4c669a] text-sm font-medium leading-normal">/</span>
+<span class="text-[#0d121b] dark:text-white text-sm font-medium leading-normal">Quần áo</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-[#e7ebf3] dark:border-gray-800 mb-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-[#0d121b] dark:text-white text-3xl lg:text-4xl font-black leading-tight tracking-[-0.033em]">Bộ sưu tập Quần áo</h1>
+<p class="text-[#4c669a] dark:text-gray-400 text-base font-normal leading-normal max-w-2xl">Thiết kế tối giản, chất liệu cao cấp cho mọi phong cách thường ngày.</p>
+</div>
+</div>
+<!-- Content Area: Filters + Grid -->
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-64 flex-shrink-0 flex flex-col gap-8">
+<!-- Filter Header Mobile Only -->
+<div class="lg:hidden flex justify-between items-center pb-4 border-b border-gray-200 dark:border-gray-800">
+<span class="font-bold text-lg">Bộ lọc</span>
+<button class="text-primary font-medium text-sm">Xóa tất cả</button>
+</div>
+<!-- Category Filter -->
+<div class="flex flex-col gap-3">
+<h3 class="text-[#0d121b] dark:text-white text-sm font-bold uppercase tracking-wider">Danh mục</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Tất cả</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Áo Thun</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Sơ mi</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Quần Jeans</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Quần Short</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Váy / Đầm</span>
+</label>
+</div>
+</div>
+<!-- Gender Filter -->
+<div class="flex flex-col gap-3">
+<h3 class="text-[#0d121b] dark:text-white text-sm font-bold uppercase tracking-wider">Đối tượng</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-gray-300 text-primary focus:ring-primary/20" name="gender" type="radio"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Nam</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-gray-300 text-primary focus:ring-primary/20" name="gender" type="radio"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Nữ</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-gray-300 text-primary focus:ring-primary/20" name="gender" type="radio"/>
+<span class="text-gray-600 dark:text-gray-300 text-sm group-hover:text-primary transition-colors">Trẻ em</span>
+</label>
+</div>
+</div>
+<!-- Size Filter -->
+<div class="flex flex-col gap-3">
+<h3 class="text-[#0d121b] dark:text-white text-sm font-bold uppercase tracking-wider">Kích cỡ</h3>
+<div class="flex flex-wrap gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 dark:border-gray-700 text-sm hover:border-primary hover:text-primary transition-all bg-white dark:bg-surface-dark">XS</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 dark:border-gray-700 text-sm hover:border-primary hover:text-primary transition-all bg-white dark:bg-surface-dark">S</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-primary bg-primary text-white text-sm transition-all shadow-sm">M</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 dark:border-gray-700 text-sm hover:border-primary hover:text-primary transition-all bg-white dark:bg-surface-dark">L</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 dark:border-gray-700 text-sm hover:border-primary hover:text-primary transition-all bg-white dark:bg-surface-dark">XL</button>
+</div>
+</div>
+<!-- Color Filter -->
+<div class="flex flex-col gap-3">
+<h3 class="text-[#0d121b] dark:text-white text-sm font-bold uppercase tracking-wider">Màu sắc</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-8 h-8 rounded-full bg-black ring-2 ring-offset-2 ring-gray-300 dark:ring-gray-600"></button>
+<button class="w-8 h-8 rounded-full bg-white border border-gray-200"></button>
+<button class="w-8 h-8 rounded-full bg-blue-600"></button>
+<button class="w-8 h-8 rounded-full bg-red-500"></button>
+<button class="w-8 h-8 rounded-full bg-amber-200"></button>
+<button class="w-8 h-8 rounded-full bg-green-700"></button>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<div class="flex-1 flex flex-col gap-6">
+<!-- Toolbar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<p class="text-[#0d121b] dark:text-white font-medium">Hiển thị 12 kết quả</p>
+<div class="flex items-center gap-3">
+<span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">Sắp xếp theo:</span>
+<div class="relative min-w-[180px]">
+<select class="w-full appearance-none rounded-lg border border-[#cfd7e7] dark:border-gray-700 bg-white dark:bg-surface-dark py-2.5 pl-4 pr-10 text-sm text-[#0d121b] dark:text-white focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Mới nhất</option>
+<option>Giá: Thấp đến Cao</option>
+<option>Giá: Cao đến Thấp</option>
+<option>Bán chạy nhất</option>
+</select>
+<span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</span>
+</div>
+</div>
+</div>
+<!-- The Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+<!-- Product Card 1 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<a href="../Male-product/Cloth-Male/Ao-thun-basic-cotton.html">
+  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Plain white basic t-shirt on male model" style="background-image: url('https://product.hstatic.net/200000588671/product/dsc02780_418e947bf6fe41fd88c6442b6e5cbaa6_1024x1024.jpg');"></div>
+</a>
+<div class="absolute top-3 left-3 bg-white dark:bg-black px-2 py-1 text-xs font-bold uppercase tracking-wide text-black dark:text-white shadow-sm rounded-sm">Mới</div>
+<button class="absolute bottom-4 right-4 h-10 w-10 translate-y-4 rounded-full bg-white dark:bg-surface-dark text-black dark:text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-medium text-[#0d121b] dark:text-white truncate group-hover:text-primary transition-colors">Áo Thun Basic Cotton</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Nam • Regular Fit</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">250.000₫</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<a href="../Male-product/Cloth-Male/Jean-Slim-Fit.html">
+  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Blue denim jeans folded neatly" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDs8HnNBao9IQ_Xttd104mHQLaCo5sO1we7uk2ImgA6aserw59i6ldAVfj6Ci0KekNCFMJ2dZsEy83SBkz9dWA_SicRhBdw0yrav1ALSMEowBDV-BtK4y1Jbxht6MKn3lCrzxi-yH7RYB-d9abNt8CdVkabbfBGGLGpzuxzCHWvPSzh74EK77okhl0W0nNc0tK9PFnkzK70M6BW9QK14zDxYmctOJfXNtGLjVQvEJiSgwZa8o_u10XFVE1buFAJh2gtZaF2uE2X9U');"></div>
+</a>
+<button class="absolute bottom-4 right-4 h-10 w-10 translate-y-4 rounded-full bg-white dark:bg-surface-dark text-black dark:text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-medium text-[#0d121b] dark:text-white truncate group-hover:text-primary transition-colors">Quần Jean Slim Fit</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Nam • Denim</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">650.000₫</span>
+<span class="text-sm text-gray-400 line-through decoration-gray-400">750.000₫</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<a href="../Male-product/Cloth-Male/Linen.html">
+  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Beige linen shirt on female model" style="background-image: url('https://pos.nvncdn.com/492284-9176/ps/20231012_tB0oGwnC1r.jpeg?v=1697093730');"></div>
+
+</a><button class="absolute bottom-4 right-4 h-10 w-10 translate-y-4 rounded-full bg-white dark:bg-surface-dark text-black dark:text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-medium text-[#0d121b] dark:text-white truncate group-hover:text-primary transition-colors">Áo Sơ Mi Linen </h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Nam • Oversized</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">450.000₫</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Kids colorful summer dress" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcpCvx4nXch4LYSXCfdQ9bwy1O5hOnh-7KJaHAtosooIn1wlZOBBhvzrbvsoK6VdDBVbE67KZzBAwVsPi8kGwOiLSWKTAfdWaSy1w-z4QqR0o0A66SvrcOq0VksjYk6r-5WIbXFbUA4pKWmMGINOVxE6GM5lWck2IwgAajtseB5mvEvswcFMfAz9GD0hKV94UK4_j8fh-NPHSuyo_fHkSTUh8zkVkiOvtZ6HnFwTWlyTvPCwo9BaWthXmsXLC2Vy1K4v6OYJfLLz0');"></div>
+<div class="absolute top-3 left-3 bg-red-500 px-2 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-sm rounded-sm">-20%</div>
+<button class="absolute bottom-4 right-4 h-10 w-10 translate-y-4 rounded-full bg-white dark:bg-surface-dark text-black dark:text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-medium text-[#0d121b] dark:text-white truncate group-hover:text-primary transition-colors">Váy Họa Tiết Mùa Hè</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Trẻ em • Cotton</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">280.000₫</span>
+<span class="text-sm text-gray-400 line-through decoration-gray-400">350.000₫</span>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<a href="../Male-product/Cloth-Male/Quan-Tay-Au.html">
+  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Black formal trousers for men" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDviF4_Ru4F-rwAIex14mEcyGCIOKUDCtmpcroWHZEDjKg83R9xkkdPUVJMgG-RDKElV2Kgr2AZs4JOUcSOnM0M_B9Zb51iik1DXTFnndLYGurWiAOpdmLVvwFsMVHWYcTrKzyfbgxdiqIy4bcJyEbO0DHJRftkZPt8sjzFuoHJ4qI_9fejOulnaV-DLj9Df_4TB3g_Y_mvgDLhxHKbAPaLu7M3U6o_Tcf4ZDhvYZtF29o_oa-5BgTsVpLG7KarpmpFZcfH_tN18qQ');"></div>
+</a>
+  <button class="absolute bottom-4 right-4 h-10 w-10 translate-y-4 rounded-full bg-white dark:bg-surface-dark text-black dark:text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-medium text-[#0d121b] dark:text-white truncate group-hover:text-primary transition-colors">Quần Tây Âu</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Nam • Công sở</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">550.000₫</span>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="White elegant blouse for women" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAApZTIl27cbxw2Zi26TlcIV642hNhXU1n0TG0hDaPOQingfOdagPa-NHi_QTZWpW6AEPosIsy8BzrzZ5ipjYbHApkW4onnHyFKHs2iDbxEfQzIZSY1gYhNm3mOysafbGsjKa5FCs8jl52QDeGCs4_Ze4BaETfRffPzoFUl5uDfOAhMPTorZPdjmNR9Gcp7zbLz_qsf1BGESBbw-74TbfDp54O0_Ml41xRMw5QuzLYfGfBe1NvRWtuHLFHqtxUAjIWVgs4YUuof8iA');"></div>
+<button class="absolute bottom-4 right-4 h-10 w-10 translate-y-4 rounded-full bg-white dark:bg-surface-dark text-black dark:text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-medium text-[#0d121b] dark:text-white truncate group-hover:text-primary transition-colors">Áo Kiểu Cổ Tròn</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Nữ • Thanh lịch</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">390.000₫</span>
+</div>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<a href="../Male-product/Cloth-Male/Short-kaki.html">
+  <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Khaki shorts folded" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTC9Lu28LDULjmo_oCdoksz2_GItf3qXpp_A5ixRsRoy2TlJ_N6LvVh8-2PslOFtcYJnkke7OBvlklRglczpw6ef-hqoK3B1W0Pe2DBMn0YR3rJpBlHLPKujVZJqiVgodMuUJ7kj7cHewJy3hAWuf5bRHVmPZxejKi7mhRfL4ipeBZ7tsa6sJg6peuy7PzOeCpvtwwcrdZ9_0sfWHfO1xYfBk54KwqS4rhYW7kW6lE3hbCjSWVklMUoGBP69gWnHZShYXDeL63vyQ');"></div>
+</a>
+  <button class="absolute bottom-4 right-4 h-10 w-10 translate-y-4 rounded-full bg-white dark:bg-surface-dark text-black dark:text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-medium text-[#0d121b] dark:text-white truncate group-hover:text-primary transition-colors">Quần Short Kaki</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Nam • Năng động</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">320.000₫</span>
+</div>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group flex flex-col gap-3 cursor-pointer">
+<div class="relative aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Striped polo shirt on hanger" style="background-image: url('https://yame.vn/cdn/shop/files/TheWeekend007Tr_ng1.jpg?v=1767011733&width=713');"></div>
+<div class="absolute top-3 left-3 bg-white dark:bg-black px-2 py-1 text-xs font-bold uppercase tracking-wide text-black dark:text-white shadow-sm rounded-sm">Hot</div>
+<button class="absolute bottom-4 right-4 h-10 w-10 translate-y-4 rounded-full bg-white dark:bg-surface-dark text-black dark:text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-primary">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-medium text-[#0d121b] dark:text-white truncate group-hover:text-primary transition-colors">Áo Polo Nam</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Nam • Cổ điển</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-base font-bold text-[#0d121b] dark:text-white">420.000₫</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center mt-12 mb-8">
+<button class="px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                            Xem thêm sản phẩm
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Minimal Footer -->
+<footer class="border-t border-[#e7ebf3] dark:border-gray-800 bg-[#f8f9fc] dark:bg-surface-dark py-12 px-6 lg:px-10 mt-auto">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-[#0d121b] dark:text-white">
+<span class="material-symbols-outlined text-3xl text-primary">local_mall</span>
+<span class="text-xl font-bold">MinimalStore</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Thời trang tối giản cho mọi người. Chất lượng hàng đầu, thiết kế bền vững.</p>
+</div>
+<div>
+<h4 class="font-bold text-[#0d121b] dark:text-white mb-4">Mua sắm</h4>
+<ul class="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Nam</a></li>
+<li><a class="hover:text-primary" href="#">Nữ</a></li>
+<li><a class="hover:text-primary" href="#">Trẻ em</a></li>
+<li><a class="hover:text-primary" href="#">Sale</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#0d121b] dark:text-white mb-4">Hỗ trợ</h4>
+<ul class="flex flex-col gap-2 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary" href="#">Trạng thái đơn hàng</a></li>
+<li><a class="hover:text-primary" href="#">Chính sách đổi trả</a></li>
+<li><a class="hover:text-primary" href="#">Liên hệ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#0d121b] dark:text-white mb-4">Đăng ký nhận tin</h4>
+<form class="flex flex-col gap-2">
+<div class="flex w-full items-stretch rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-surface-dark overflow-hidden focus-within:ring-1 focus-within:ring-primary focus-within:border-primary">
+<input class="w-full bg-transparent px-3 py-2 text-sm outline-none" placeholder="Email của bạn"/>
+<button class="bg-primary px-4 py-2 text-white hover:bg-primary/90">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<p class="text-xs text-gray-400">Nhận ưu đãi độc quyền hàng tuần.</p>
+</form>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+<p>© 2023 MinimalStore. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

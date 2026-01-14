@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nike Style Store - Giỏ hàng</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2233",
+                        "text-main": "#0d121b",
+                        "text-secondary": "#4c669a",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-white transition-colors duration-200">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface-light dark:bg-surface-dark border-b border-[#e7ebf3] dark:border-gray-800 px-4 sm:px-8 lg:px-12 py-3 shadow-sm transition-colors duration-200">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+<!-- Logo & Brand -->
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-3 text-text-main dark:text-white group" href="#">
+<div class="size-8 transition-transform group-hover:scale-110">
+<!-- Nike-ish Logo SVG -->
+<svg class="w-full h-full text-text-main dark:text-white" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 8.25C21 8.25 10.5 14.25 6 14.25C3.75 14.25 1.5 13.5 1.5 11.25C1.5 9 3.75 6.75 7.5 4.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M7.5 4.5C10 6 15 10.5 22.5 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Nike Style Store</h2>
+</a>
+<!-- Desktop Menu -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Mới &amp; Nổi bật</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Nam</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Nữ</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Trẻ em</a>
+<a class="text-sm font-medium text-red-500 hover:text-red-600 transition-colors" href="#">Sale</a>
+</nav>
+</div>
+<!-- Right Actions -->
+<div class="flex items-center gap-4 md:gap-6">
+<!-- Search Bar (Hidden on Mobile) -->
+<div class="hidden md:flex items-center bg-[#e7ebf3] dark:bg-gray-800 rounded-full h-10 px-4 w-64 transition-colors">
+<span class="material-symbols-outlined text-text-secondary dark:text-gray-400 text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-text-main dark:text-white placeholder:text-text-secondary dark:placeholder:text-gray-500" placeholder="Tìm kiếm sản phẩm..." type="text"/>
+</div>
+<!-- Icons -->
+<div class="flex items-center gap-2">
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-[#e7ebf3] dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-[#e7ebf3] dark:hover:bg-gray-800 transition-colors relative">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+<span class="absolute top-1.5 right-1.5 size-2.5 bg-primary rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<button class="hidden md:flex size-10 items-center justify-center rounded-full hover:bg-[#e7ebf3] dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-[24px]">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+<!-- Page Title -->
+<div class="mb-8">
+<h1 class="text-3xl font-black tracking-tight text-text-main dark:text-white">Giỏ hàng của bạn</h1>
+<p class="text-text-secondary dark:text-gray-400 mt-1">Tổng cộng 3 sản phẩm • Miễn phí vận chuyển cho đơn hàng này</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+<!-- Cart Items Column (Left) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Item 1 -->
+<div class="group flex flex-col sm:flex-row gap-5 p-4 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-transparent dark:border-gray-800 hover:border-primary/20 dark:hover:border-primary/40 transition-all">
+<!-- Image -->
+<div class="relative shrink-0 overflow-hidden rounded-lg w-full sm:w-[140px] aspect-square bg-gray-100 dark:bg-gray-800">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Red and white Nike Air Max 90 sneakers side view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1ivxrJSP_nwSmQfrRw2p8R_n41uVbQlhG74Ar7j3t7d4w6vuyDVvoJBOi5gqSdvdq7lUwl67mxnNh92_sF6iRSqOruPIuIelLsRtj92xbkWP6AXrerSR4t_JIHoV8lngksve2LCT-buu1228cyUYYzthvR-wbGdIUbH3tb8vT_kw-4Mo2gaOyZdRh8l7UTNxoKKqf1KcAQBViUcPaoVDE0pOgrd6ImPTOUt7sEWs66jUrnU_U2pXzFwdmI3pOiNEwFqPcxA5Rm1A');"></div>
+</div>
+<!-- Details -->
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight">Nike Air Max 90</h3>
+<p class="text-sm text-text-secondary dark:text-gray-400 mt-1">Giày Chạy Bộ Nam</p>
+<div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-text-secondary dark:text-gray-400">
+<p>Size: <span class="text-text-main dark:text-white font-medium">42</span></p>
+<p>Màu: <span class="text-text-main dark:text-white font-medium">Trắng/Đỏ</span></p>
+</div>
+</div>
+<p class="text-lg font-bold text-text-main dark:text-white">3.500.000₫</p>
+</div>
+<div class="flex justify-between items-end mt-4">
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<!-- Quantity -->
+<div class="flex items-center border border-[#e7ebf3] dark:border-gray-700 rounded-lg h-9">
+<button class="w-9 h-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 rounded-l-lg transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<input class="w-10 h-full text-center border-none bg-transparent p-0 text-sm font-medium focus:ring-0 text-text-main dark:text-white [appearance:textfield] [&amp;::-webkit-inner-spin-button]:appearance-none" type="number" value="1"/>
+<button class="w-9 h-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 rounded-r-lg transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Remove -->
+<button class="size-9 flex items-center justify-center text-text-secondary hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors" title="Xóa khỏi giỏ hàng">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex flex-col sm:flex-row gap-5 p-4 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-transparent dark:border-gray-800 hover:border-primary/20 dark:hover:border-primary/40 transition-all">
+<!-- Image -->
+<div class="relative shrink-0 overflow-hidden rounded-lg w-full sm:w-[140px] aspect-square bg-gray-100 dark:bg-gray-800">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Black Nike Air Force 1 sneakers perspective view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1I5TcGmFG2OgSbUJshMR2jegoRIPqYImAqszcg1cHoAR5Dd9rOyBfPfQKs2KHDLXyr3CLnRWarYk-sSKq_IY_GK91nO30E2c1jeXNifBBtUaEWaW9YZOG4ypKSOksxdDPEV39FTanuryPuhUGZ7hHAYbyWDKAyHfg_WWsWj910YgZYI7EbTZBN2sDTSaScXtS2Qs7XKh0qdT9InVHVh0y0H4_iG7wcgKgFz9bNRyM7s-qnV9PQ1qUdbWinhIhvkLXKgnsbpNT55U');"></div>
+</div>
+<!-- Details -->
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight">Nike Air Force 1 '07</h3>
+<p class="text-sm text-text-secondary dark:text-gray-400 mt-1">Giày Thời Trang Nam</p>
+<div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-text-secondary dark:text-gray-400">
+<p>Size: <span class="text-text-main dark:text-white font-medium">40</span></p>
+<p>Màu: <span class="text-text-main dark:text-white font-medium">Đen</span></p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-lg font-bold text-text-main dark:text-white">11.600.000₫</p>
+<p class="text-xs text-text-secondary dark:text-gray-500 mt-0.5">5.800.000₫ / đôi</p>
+</div>
+</div>
+<div class="flex justify-between items-end mt-4">
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<!-- Quantity -->
+<div class="flex items-center border border-[#e7ebf3] dark:border-gray-700 rounded-lg h-9">
+<button class="w-9 h-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 rounded-l-lg transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<input class="w-10 h-full text-center border-none bg-transparent p-0 text-sm font-medium focus:ring-0 text-text-main dark:text-white [appearance:textfield] [&amp;::-webkit-inner-spin-button]:appearance-none" type="number" value="2"/>
+<button class="w-9 h-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 rounded-r-lg transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Remove -->
+<button class="size-9 flex items-center justify-center text-text-secondary hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors" title="Xóa khỏi giỏ hàng">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group flex flex-col sm:flex-row gap-5 p-4 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-transparent dark:border-gray-800 hover:border-primary/20 dark:hover:border-primary/40 transition-all">
+<!-- Image -->
+<div class="relative shrink-0 overflow-hidden rounded-lg w-full sm:w-[140px] aspect-square bg-gray-100 dark:bg-gray-800">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Neon green Nike Zoom Fly 5 running shoes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMlqbYh36vbaTfRmH7-co-lFpvU64b6ciduBzTwI3waGEKovvyO3LTVeixRuiphbhBPJ7Cu7JtqxFsv4bkmrLdrbNpB8GrbSltFMEBV8ScdykcPtk7DAhKAEWyr15DFS4ANZG14OVgNeBUzRE5rNiaqgq9I0Klo34kBVdSMkDhOIfz9CyTpCKV486GEk_7dyyrhq4aDrfbojyg_6dFZpm-32ajn-1UpRomOfExh0KB8Awo2UlnSZcr3NWSMTCEAFaP7YdGBR8dEq0');"></div>
+</div>
+<!-- Details -->
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white leading-tight">Nike Zoom Fly 5</h3>
+<p class="text-sm text-text-secondary dark:text-gray-400 mt-1">Giày Chạy Bộ Nữ</p>
+<div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-text-secondary dark:text-gray-400">
+<p>Size: <span class="text-text-main dark:text-white font-medium">43</span></p>
+<p>Màu: <span class="text-text-main dark:text-white font-medium">Xanh Neon</span></p>
+</div>
+</div>
+<p class="text-lg font-bold text-text-main dark:text-white">4.200.000₫</p>
+</div>
+<div class="flex justify-between items-end mt-4">
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<!-- Quantity -->
+<div class="flex items-center border border-[#e7ebf3] dark:border-gray-700 rounded-lg h-9">
+<button class="w-9 h-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 rounded-l-lg transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<input class="w-10 h-full text-center border-none bg-transparent p-0 text-sm font-medium focus:ring-0 text-text-main dark:text-white [appearance:textfield] [&amp;::-webkit-inner-spin-button]:appearance-none" type="number" value="1"/>
+<button class="w-9 h-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 rounded-r-lg transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Remove -->
+<button class="size-9 flex items-center justify-center text-text-secondary hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors" title="Xóa khỏi giỏ hàng">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Column (Right - Sticky) -->
+<div class="lg:col-span-4 lg:sticky lg:top-24">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-lg border border-transparent dark:border-gray-800 p-6 flex flex-col gap-6">
+<h2 class="text-xl font-bold text-text-main dark:text-white">Tóm tắt đơn hàng</h2>
+<!-- Breakdown -->
+<div class="flex flex-col gap-3 pb-6 border-b border-[#e7ebf3] dark:border-gray-800">
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-secondary dark:text-gray-400">Tạm tính</span>
+<span class="font-medium text-text-main dark:text-white">19.300.000₫</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-secondary dark:text-gray-400">Vận chuyển</span>
+<span class="font-medium text-green-600 dark:text-green-500">Miễn phí</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-secondary dark:text-gray-400">Thuế dự kiến</span>
+<span class="font-medium text-text-main dark:text-white">Đã bao gồm</span>
+</div>
+</div>
+<!-- Promo Code -->
+<div>
+<label class="text-xs font-semibold text-text-secondary dark:text-gray-400 uppercase tracking-wider mb-2 block">Mã giảm giá</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-background-light dark:bg-gray-900 border border-[#e7ebf3] dark:border-gray-700 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-primary focus:border-primary dark:text-white placeholder:text-gray-400" placeholder="Nhập mã..." type="text"/>
+<button class="bg-gray-200 dark:bg-gray-700 text-text-main dark:text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                                Áp dụng
+                            </button>
+</div>
+</div>
+<!-- Total -->
+<div class="flex justify-between items-end pt-2">
+<span class="text-base font-semibold text-text-main dark:text-white">Tổng cộng</span>
+<div class="text-right">
+<span class="block text-2xl font-black text-text-main dark:text-white tracking-tight">19.300.000₫</span>
+<span class="text-xs text-text-secondary dark:text-gray-400">(Đã bao gồm VAT)</span>
+</div>
+</div>
+<!-- Checkout Button -->
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-full shadow-lg shadow-blue-500/20 transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 mt-2">
+<span>Tiến hành thanh toán</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Trust Badges (Optional Visual Aid) -->
+<div class="pt-4 flex justify-center gap-4 text-gray-300 dark:text-gray-600">
+<span class="material-symbols-outlined text-[24px]" title="Secure Payment">lock</span>
+<span class="material-symbols-outlined text-[24px]" title="Verified">verified_user</span>
+<span class="material-symbols-outlined text-[24px]" title="Fast Delivery">local_shipping</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

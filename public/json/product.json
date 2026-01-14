@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Air Runner Pro",
+    "img": "/public/img/Air-Runner-Pro.png",
+    "price": "3,000,000đ",
+    "page":"/app/models/Air-runner-pro.html"
+  },
+  {
+    "id": 2,
+    "name": "Nike Cortez Leather",
+    "img": "/public/img/Nike-Cortez-Leather.png",
+    "price": "3,519,000đ",
+    "page":"/app/models/Nike-Cortez-Leather.html"
+  },
+  {
+    "id": 3,
+    "name": "Nike Cortez SE",
+    "img": "/public/img/Nike-Cortez-SE.png",
+    "price": "2,343,200đ",
+    "page":"/app/models/Nike-Cortez-SE.html"
+  },
+  {
+    "id": 4,
+    "name": "Nike Air Max Moto 2K",
+    "img": "/public/img/Nike-Air-Max-Moto2k-1.png",
+    "price": "4,699,000đ",
+    "page":"/app/models/Nike-Air-Max-Moto-2k.html"
+  },
+  {
+    "id": 5,
+    "name": "Nike Killshot 2 Premium",
+    "img": "/public/img/Nike-Killshot-2-Premium-1.png",
+    "price": "2,343,200đ",
+    "page":"/app/models/Nike-Kill-shot.html"
+  },
+  {
+    "id": 6,
+    "name": "NikeCourt Lite 4",
+    "img": "/public/img/NikeCourt-Lite-4-1.png",
+    "price": "2,343,200đ",
+    "page":"/app/models/NikeCourt-Lite-4.html"
+  },
+  {
+    "id": 7,
+    "name": "Áo Thun Premium Cotton",
+    "img": "/public/img/Aothuntrang-3.png",
+    "price": "350.000đ",
+    "page":"/app/models/Áo-thun-trắng.html"
+  },
+  {
+    "id": 8,
+    "name": "Hoodie Basic Xám",
+    "img": "/public/img/Hoodie-basic-xam-1.png",
+    "price": "480.000đ",
+    "page":"/app/models/Hoode-Basic-Xám.html"
+  },
+  {
+    "id": 9,
+    "name": "Quần Kaki",
+    "img": "/public/img/Kaki-pant-4.png",
+    "price": "850.000đ",
+    "page":"/app/models/Kaki.html"
+  },
+  {
+    "id": 10,
+    "name": "Nike Air Zoom Pegasus",
+    "img": "/public/img/Zoom-Pegasus-1.png",
+    "price": "2.890.000đ",
+    "page":"/app/models/Female-product/Shoes-Female/Zoom-Pegasus.html"
+  },
+  {
+    "id": 11,
+    "name": "Áo Thun Cotton Basic",
+    "img": "/public/img/Ao-thun-nu-1.png",
+    "price": "350.000đ",
+    "page":"/app/models/Female-product/Shoes-Female/Ao-Thun-Basic.html"
+  },
+  {
+    "id": 12,
+    "name": "Hoodie Trắng",
+    "img": "/public/img/Hoddie-Trang-1.png",
+    "price": "550.000đ",
+    "page":"/app/models/Female-product/Shoes-Female/Hoddie-Trang.html"
+  },
+  {
+    "id": 13,
+    "name": "Sneaker Trắng Cổ Điển",
+    "img": "/public/img/Sneaker-white-1.png",
+    "price": "1.250.000đ",
+    "page":"/app/models/Female-product/Shoes-Female/Sneaker-Trang.html"
+  },
+  {
+    "id": 14,
+    "name": "Áo Thun Xanh",
+    "img": "/public/img/Ao-thun-cotton-kid-1.png",
+    "price": "150.000đ",
+    "page":"/app/models/Kid-Product/Kid-Cloth/Ao-Thun.html"
+  },
+  {
+    "id": 15,
+    "name": "Hoddie Vàng",
+    "img": "/public/img/Hoddie-Vang-1.png",
+    "price": "450.000đ",
+    "page":"/app/models/Kid-Product/Kid-Cloth/Hoddie-Vang.html"
+  },
+  {
+    "id": 16,
+    "name": "Giày Thể Thao",
+    "img": "/public/img/Giay-The-Thao-Kid-1.png",
+    "price": "450.000đ",
+    "page":"/app/models/Kid-Product/Kid-Cloth/Giay-The-Thao.html"
+  },
+   {
+    "id": 17,
+    "name": "Quần Jean",
+    "img": "/public/img/Jean-kid-5.png",
+    "price": "450.000đ",
+    "page":"/app/models/Kid-Product/Kid-Cloth/Quan-Jean.html"
+  },
+  {
+    "id": 18,
+    "name": "Minimal Black Hoodie",
+    "img": "/public/img/Hoddie-Black5.png",
+    "price": "450.000đ",
+    "page":"/app/models/Sale-Product/Ao-Sale/Minimal-Black-Hoddie.html"
+  },
+  {
+    "id": 19,
+    "name": "Oversized Cotton Tee",
+    "img": "/public/img/Ao-nu-sale-1.png",
+    "price": "210.000đ",
+    "page":"/app/models/Sale-Product/Ao-Sale/Oversized-Cotton-Tee.html"
+  },{
+    "id": 20,
+    "name": "Slim Fit Chinos",
+    "img": "/public/img/Chinos-1.png",
+    "price": "450.000đ",
+    "page":"/app/models/Kid-Product/Kid-Cloth/Chinos.html"
+  }
+
+]

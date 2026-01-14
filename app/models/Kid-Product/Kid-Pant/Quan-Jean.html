@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quần Jean</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Noto+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../../../../public/js/shoes-product-female.js" defer></script>
+<script src="../../../../public/js/auth.js"></script>
+<script src="../../../../public/js/Cart.js"> </script>
+<link rel="stylesheet" href="../../../../public/css/Shoes-product-female.css">
+<link rel="icon" href="../../../../public/img/Mainlogo.png">
+<link rel="stylesheet" href="../../../../public/css/Product.css">
+<script src="../../../../public/js/Search.js" defer></script>
+<script src="../../../../public/js/RandomProduct.js" defer></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#ffffff", 
+                        "background-dark": "#101622",
+                        "text-main": "#0d121b",
+                        "text-secondary": "#707072",
+                        "gray-light": "#f5f5f5",
+                        "gray-hover": "#e5e5e5",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px", "md": "0.375rem"},
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+        .sticky-summary {
+            position: sticky;
+            top: 2rem;
+            align-self: start;
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased selection:bg-primary/20 selection:text-primary">
+<header class="sticky top-0 z-50 w-full border-b border-[#e5e5e5] bg-background-light/95 backdrop-blur supports-[backdrop-filter]:bg-background-light/60 dark:border-gray-800 dark:bg-background-dark/95">
+<div class="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-12">
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-2 group" href="#">
+<div class="size-8 text-text-main dark:text-white transition-transform group-hover:scale-110">
+</div>
+<a href="../../../../index.html">
+    <img src="../../../../public/img/Mainlogo.png" alt="" class="main-logo">
+    <div class="My-store">Azces Store</div>
+</a>
+</a>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="../../Male-product.html">Men</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="../../Female-product.html">Women</a>
+<a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300" href="../../Kids-product.html">Kids</a>
+<a class="text-sm font-medium text-red-600 hover:text-red-700 transition-colors" href="#">Sale</a>
+</nav>
+<div class="flex items-center gap-2 sm:gap-4">
+<div class="hidden lg:flex items-center bg-gray-light dark:bg-gray-800 rounded-full px-4 py-2 w-48 hover:bg-gray-hover dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-gray-500 text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full py-0 dark:text-white placeholder-gray-500" placeholder="Search" type="text"/>
+</div>
+<button class="p-2 rounded-full hover:bg-gray-light dark:hover:bg-gray-800 transition-colors lg:hidden">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-blue-700 transition-colors text-white text-sm font-bold tracking-wide" id="Login">
+    <a href="../../../views/user/Login.html" ><span class="truncate">Đăng nhập</span></a>
+    </button>
+    <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors text-slate-900 dark:text-white text-sm font-bold tracking-wide" id="Signin">
+        <a href="../../../views/user/Sigin.html" ><span class="truncate">Đăng ký</span></a>
+        </button>
+        <div class="relative">
+
+            <!-- NÚT GIỎ HÀNG -->
+            <button
+              id="cartBtn"
+              class="relative flex items-center justify-center h-10 w-10 rounded-lg
+                     bg-gray-100 dark:bg-gray-800
+                     hover:bg-gray-200 dark:hover:bg-gray-700
+                     text-slate-900 dark:text-white transition-colors"
+            >
+              <span class="material-symbols-outlined text-[20px]">
+                shopping_cart
+              </span>
+          
+              <!-- SỐ LƯỢNG -->
+              <span
+                id="cartCount"
+                class="absolute -top-1 -right-1
+                       flex items-center justify-center
+                       h-5 w-5 rounded-full
+                       bg-red-500 text-white text-[12px]"
+              >
+                0
+              </span>
+            </button>
+          
+            <!-- DROPDOWN -->
+            <div
+              id="cartDropdown"
+              class="hidden absolute right-0 mt-3 w-72
+                     rounded-xl border border-gray-200 dark:border-gray-700
+                     bg-white dark:bg-gray-900
+                     shadow-lg z-50"
+            >
+              <ul id="cartItems" class="max-h-60 overflow-y-auto p-3 space-y-2"></ul>
+          
+              <div class="flex items-center justify-between border-t
+                          border-gray-200 dark:border-gray-700
+                          p-3 text-sm">
+                <span>
+                  Tổng: <strong id="cartTotal">0₫</strong>
+                </span>
+          
+                <button
+                  id="clearCart"
+                  class="text-red-500 border border-red-500
+                         px-2 py-1 rounded-md text-xs
+                         hover:bg-red-500 hover:text-white transition"
+                >
+                  Xóa tất cả
+                </button>
+              </div>
+               <div style="display: flex;
+                        justify-content: center;
+                        background-color: rgb(26, 24, 24);
+                        margin-top:5%;
+                        align-items: center;
+                        height: 40px;
+                        border-radius: 20px;
+                        color:white;
+                        padding-bottom: 10px;
+                        ">
+                          <a href="../../Chi-TIet/Chi-Tiet-San-Pham.html"style="margin-top:8px;
+                        
+                        "><span>Chi tiết và thanh toán</span>
+                        </a>
+                        </div> 
+            </div>
+          </div>
+          <div class="nav">
+            <span id="helloUser" class="helloUser "></span>
+
+            <label onclick="menu.hidden^=1"
+                class="material-symbols-outlined cursor-pointer hover:text-primary"
+                style="font-size: 30px;" id="user-icon">
+                person
+            </label>
+
+            <ul id="menu" hidden>
+                <a href="../../../../index.html"><li>Home</li></a>
+                <li>About</li>
+                <li id="logoutBtn" style="color:red;cursor:pointer">Đăng xuất</li>
+            </ul>
+            </div>
+        
+</div>
+</div>
+</header>
+<main class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-12 py-8 lg:py-12">
+<div class="flex flex-col lg:hidden mb-6">
+<div class="flex flex-wrap items-center gap-2 text-sm text-text-secondary dark:text-gray-400 mb-2">
+<a class="hover:text-text-main dark:hover:text-white underline-offset-4 hover:underline" href="../../../../index.html">Home</a>
+<span>/</span>
+<a class="hover:text-text-main dark:hover:text-white underline-offset-4 hover:underline" href="../../Male-product.html">Men</a>
+<span>/</span>
+<span class="text-text-main dark:text-white font-medium">Running Shoes</span>
+</div>
+<h1 class="text-2xl font-bold text-text-main dark:text-white">Nike Air Max Moto 2K</h1>
+<p class="text-text-secondary dark:text-gray-400">Women's Shoes</p>
+<div class="mt-2 text-lg font-medium text-text-main dark:text-white">4,699,000₫</div>
+</div>
+<div class="lg:grid lg:grid-cols-12 lg:gap-12 relative">
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-4">
+<div class="hidden lg:flex flex-wrap items-center gap-2 text-sm text-text-secondary dark:text-gray-400 mb-2 pl-2">
+<a class="hover:text-text-main dark:hover:text-white underline-offset-4 hover:underline" href="../../../../index.html">Home</a>
+<span>/</span>
+<a class="hover:text-text-main dark:hover:text-white underline-offset-4 hover:underline" href="../../Male-product.html">Men</a>
+<span>/</span>
+<span class="text-text-main dark:text-white font-medium">Running Shoes</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 aspect-[8/5] cursor-zoom-in sm:col-span-2">
+    <img src="../../../../public/img/Jean-kid-1.png" alt="" class="picture1 w-full h-full object-cover">
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-black/60 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-text-main dark:text-white shadow-sm pointer-events-none">
+                        Selected Color View
+                    </div>
+</div>
+            <div class="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 aspect-[4/5] cursor-zoom-in">
+                <img src="../../../../public/img/Jean-kid-2.png" alt="" class="picture2">
+            </div>
+            <div class="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 aspect-[4/5] cursor-zoom-in">
+            <img src="../../../../public/img/Jean-kid-3.png" alt="" class="picture3">
+            </div>
+            <div class="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 aspect-[4/5] cursor-zoom-in">
+            <img src="../../../../public/img/Jean-kid-4.png" class="picture4">
+            </div>
+            <div class="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 aspect-[4/5] cursor-zoom-in">
+            <img src="../../../../public/img/Jean-kid-5.png" alt="" class="picture5">
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 xl:col-span-4 mt-8 lg:mt-0">
+<div class=" space-y-8 pr-2">
+<div class="hidden lg:block space-y-2">
+<h1 class="text-[28px] leading-tight font-bold text-text-main dark:text-white">Quần Jean</h1>
+<p class="text-base text-text-main dark:text-gray-300 font-medium">Quần </p>
+<div class="flex gap-2 items-center">
+<p class="text-red-500 font-bold text-sm">280.000đ</p>
+<p class="text-slate-400 text-xs line-through">350.000đ</p>
+</div>
+</div>
+<div class="space-y-4">
+
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm font-medium dark:text-gray-200">Select Size</span>
+<a class="text-sm font-medium text-text-secondary hover:text-text-main dark:text-gray-400 dark:hover:text-white" href="#">Size Guide</a>
+</div>
+<div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-3 gap-2">
+  <button class="size-btn py-3 rounded-md border">EU 38.5</button>
+  <button class="size-btn py-3 rounded-md border">EU 39</button>
+  <button class="size-btn py-3 rounded-md border">EU 40</button>
+
+  <button class="py-3 rounded-md border bg-gray-50 cursor-not-allowed opacity-50" disabled>
+    EU 40.5
+  </button>
+
+  <button class="size-btn py-3 rounded-md border">EU 41</button>
+  <button class="size-btn py-3 rounded-md border">EU 42</button>
+  <button class="size-btn py-3 rounded-md border">EU 42.5</button>
+  <button class="size-btn py-3 rounded-md border">EU 43</button>
+  <button class="size-btn py-3 rounded-md border">EU 44</button>
+</div>
+
+</div>
+                <div class="space-y-3 pt-4">
+                    <div role="button" class="add-product" data-id="17">
+                        <button class="Add-to-bag">
+                            Add to Bag
+                        </button>
+                    </div>
+                <button class="w-full rounded-full border border-gray-300 dark:border-gray-600 hover:border-text-main dark:hover:border-white text-text-main dark:text-white py-4 font-semibold text-base flex items-center justify-center gap-2 transition-colors">
+                                            Favorite <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+                </button>
+                </div>
+                <div class="py-4 text-base leading-relaxed text-text-main dark:text-gray-300">
+                <p class="mb-4">
+                   Quần jean với thiết kế basic, bền bỉ và không bao giờ lỗi mốt.
+                    Chất liệu denim chắc chắn, đứng form nhưng vẫn tạo cảm giác thoải mái khi vận động.
+                    Dễ phối cùng áo thun, hoodie hay áo sơ mi, phù hợp cho nhiều phong cách từ casual đến streetwear.
+                </p>
+                <ul class="list-disc pl-5 space-y-1 marker:text-text-secondary">
+                <li>Colour Shown: Blue</li>
+                <li>Style: Basic · Casual · Streetwear</li>
+                <li>Country/Region of Origin: Vietnam</li>
+                </ul>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-2">
+                <details class="group py-4 cursor-pointer border-b border-gray-200 dark:border-gray-700">
+                <summary class="flex w-full items-center justify-between text-lg font-medium text-text-main dark:text-white list-none">
+                                                Delivery &amp; Returns
+                                                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="pt-4 text-text-secondary dark:text-gray-400 text-base">
+                <p class="mb-2">Free standard delivery on all orders over 5,000,000₫.</p>
+                <p>You can return your order for any reason, free of charge, within 30 days.</p>
+                </div>
+                </details>
+                <details class="group py-4 cursor-pointer border-b border-gray-200 dark:border-gray-700" open="">
+                <summary class="flex w-full items-center justify-between text-lg font-medium text-text-main dark:text-white list-none">
+                                                Reviews (124)
+                                                <div class="flex items-center gap-2">
+                <div class="flex text-text-main dark:text-white">
+                <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                <span class="material-symbols-outlined text-[18px] fill-current">star</span>
+                <span class="material-symbols-outlined text-[18px] text-gray-300">star</span>
+                </div>
+                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                </div>
+                </summary>
+                <div class="pt-6 space-y-6">
+                <div>
+                <div class="flex justify-between items-start mb-1">
+                <h4 class="font-bold text-text-main dark:text-white">Great everyday runner</h4>
+                <span class="text-sm text-text-secondary dark:text-gray-500">2 days ago</span>
+                </div>
+                <div class="flex text-text-main dark:text-white mb-2">
+                <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+                <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+                <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+                <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+                <span class="material-symbols-outlined text-[16px] fill-current">star</span>
+                </div>
+                <p class="text-text-secondary dark:text-gray-400 text-sm">
+                                                        The Pegasus 39 feels lighter than the 38s. The double zoom air units really give a nice pop off the toe. Fits true to size.
+                                                    </p>
+                <p class="text-xs text-text-secondary mt-2">More by <span class="underline">RunningFan22</span></p>
+                </div>
+                <button class="text-sm underline font-medium hover:text-primary dark:text-gray-300 dark:hover:text-white">Write a Review</button>
+                </div>
+                </details>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="mt-20 border-t border-gray-200 dark:border-gray-800 pt-10">
+                    <h3 class="text-2xl font-bold mb-6 text-text-main dark:text-white">
+                        You Might Also Like
+                    </h3>
+
+                    <div id="youMayLike"
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8">
+                    </div>
+                    </div>
+                </main>
+<footer class="bg-black text-white pt-12 pb-6">
+<div class="mx-auto max-w-[1440px] px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-gray-800 pb-12">
+<div>
+<h3 class="font-bold text-sm uppercase mb-4 tracking-wider">Find A Store</h3>
+<h3 class="font-bold text-sm uppercase mb-4 tracking-wider">Become A Member</h3>
+<h3 class="font-bold text-sm uppercase mb-4 tracking-wider">Sign Up for Email</h3>
+<h3 class="font-bold text-sm uppercase mb-4 tracking-wider">Send Us Feedback</h3>
+<h3 class="font-bold text-sm uppercase mb-4 tracking-wider">Student Discounts</h3>
+</div>
+<div>
+<h3 class="font-bold text-sm uppercase mb-4 tracking-wider">Get Help</h3>
+<ul class="text-xs text-gray-400 space-y-3 font-body">
+<li class="hover:text-white cursor-pointer">Order Status</li>
+<li class="hover:text-white cursor-pointer">Delivery</li>
+<li class="hover:text-white cursor-pointer">Returns</li>
+<li class="hover:text-white cursor-pointer">Payment Options</li>
+<li class="hover:text-white cursor-pointer">Contact Us</li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-sm uppercase mb-4 tracking-wider">About Nike</h3>
+<ul class="text-xs text-gray-400 space-y-3 font-body">
+<li class="hover:text-white cursor-pointer">News</li>
+<li class="hover:text-white cursor-pointer">Careers</li>
+<li class="hover:text-white cursor-pointer">Investors</li>
+<li class="hover:text-white cursor-pointer">Sustainability</li>
+</ul>
+</div>
+<div class="flex gap-4 items-start md:justify-end">
+<div class="size-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition-colors cursor-pointer">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</div>
+<div class="size-8 rounded-full bg-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition-colors cursor-pointer">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+</div>
+</div>
+<div class="mx-auto max-w-[1440px] px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center pt-8 gap-4">
+<div class="flex items-center gap-4 text-xs text-gray-400">
+<span class="text-white cursor-pointer"><span class="material-symbols-outlined align-middle text-sm mr-1">location_on</span> Vietnam</span>
+<span>© 2023 Nike, Inc. All Rights Reserved</span>
+</div>
+<div class="flex gap-6 text-xs text-gray-400 font-body">
+<span class="hover:text-white cursor-pointer">Guides</span>
+<span class="hover:text-white cursor-pointer">Terms of Sale</span>
+<span class="hover:text-white cursor-pointer">Terms of Use</span>
+<span class="hover:text-white cursor-pointer">Privacy Policy</span>
+</div>
+</div>
+</footer>
+
+</body></html>

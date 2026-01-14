@@ -1,0 +1,244 @@
+/* ====== SỬA RIÊNG BADGE "MỚI RA MẮT" ====== */
+.inline-block.px-3.py-1.rounded-full {
+    background-color: #000000 !important; /* Màu đen cho badge */
+    color: white !important; /* Chữ màu trắng để dễ đọc trên nền đen */
+    border: 2px solid #000000 !important; /* Viền đen (nếu cần) */
+    font-weight: bold;
+}
+
+/* Hoặc nếu muốn badge có độ trong suốt */
+.inline-block.px-3.py-1.rounded-full.bg-primary\\/90 {
+    background-color: rgba(0, 0, 0, 0.9) !important; /* Đen với độ trong suốt 90% */
+    color: white !important;
+}
+
+/* ====== HOẶC SỬA TRỰC TIẾP BẰNG ID/CLASS CỤ THỂ ====== */
+/* Nếu badge có ID cụ thể, thêm vào HTML: */
+/* <span id="new-badge" class="inline-block px-3 py-1 rounded-full ...">MỚI RA MẮT</span> */
+
+#new-badge {
+    background-color: #000000;
+    color: white;
+    border: 2px solid #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ====== HOẶC SỬA BẰNG SELECTOR CHÍNH XÁC HƠN ====== */
+/* Tìm class chính xác của badge từ HTML và thêm vào đây */
+.bg-primary {
+    background-color: #000000 !important;
+}
+
+/* CSS hiện tại giữ nguyên, chỉ thêm phần trên vào */
+.main-logo {
+    margin-top:-100%;
+    cursor: pointer;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+.My-store{
+    margin-left:120%;
+    margin-top:-90%;
+    cursor: pointer;
+    font-weight: bolder;
+    width: 100px;
+    height: 30px;
+    color: #000000;
+}
+
+/* ====== THAY ĐỔI MÀU CHÍNH TỪ XANH SANG ĐEN ====== */
+#Login {
+    background-color: #000000;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#Login:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#Signin {
+    background-color: #ff6b35;
+    color: white;
+    border: 2px solid #ff6b35;
+}
+
+#Signin:hover {
+    background-color: #e55a2b;
+    border-color: #e55a2b;
+}
+
+.cart-item-price {
+    font-size: 13px;
+    color: #000000;
+}
+
+.cart-item-name span {
+    background: #000000;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 6px;
+}
+
+.text-sm.font-medium.hover\\:text-primary {
+    color: #000000 !important;
+}
+
+.text-primary {
+    color: #000000 !important;
+}
+
+.bg-primary {
+    background-color: #000000 !important;
+}
+
+.hover\\:text-primary:hover {
+    color: #000000 !important;
+}
+
+.bg-primary\\/90 {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+@media (max-width:576px){
+  .nav-media {
+  display: block;
+  font-size: 36px;
+}
+.setting {
+  cursor: pointer;
+  font-size: 30px;
+  user-select: none;
+}
+
+#menu2 {
+  position: absolute;
+  top: 110%;
+  right: 3%;
+  width: 450px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 8px 0;
+  font-size: 20px;
+  color: black;
+  transform: translateX(100%); 
+  opacity: 0;                
+  pointer-events: none;        
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#toggleMenu{
+  display: none;
+}
+#toggleMenu:checked + .setting + #menu2 {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto; 
+}
+#menu2 li:hover{
+  background-color: gainsboro;
+}
+}
+#cartDropdown {
+  position: absolute;
+  top: 90%;
+  left:70.5%;
+  display: none;
+  z-index: 9999;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px dashed #e5e7eb;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.12);
+  border-radius:10px;
+  width: 300px;
+  padding:10px;
+}
+#cartDropdown.show {
+  display: block;
+}
+
+#cartItems li {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 6px;
+}
+.cart-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item-name{
+  font-size: 14px;
+  display: flex;
+  font-weight: bold;
+}
+
+.add-product{
+    width: 200px;
+    height: 36px;
+    margin-top:-20%;
+    margin-left:15%;
+    background-color: black;
+    color:white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;      /* CANH GIỮA DỌC */
+    justify-content: center;
+    gap: 6px; 
+    cursor: pointer;
+
+   
+}
+.nav{
+  position: relative;
+}
+#menu {
+  position: absolute;
+  left:100%;
+  top:100%;
+  width: 100px;
+  height: 100px;
+  border:2px solid black;
+  background-color: #eeebeb;
+}
+#user-icon{
+  margin-top:10%;
+}
+.helloUser{
+  display: inline-block;
+  font-weight: 20px;
+  color:rgb(56, 56, 56);
+}
+#heart:active{
+  color:#000000;
+}
+.text-primary {
+    color: #000000 !important;
+}
+.text-primary {
+    color: #e53935 !important; /* đỏ */
+}
+.inline-block.px-3.py-1.rounded-full {
+    background-color: #000000 !important; /* nền đen */
+    color: #ffffff !important;           /* chữ trắng */
+    font-weight: bold;
+}
+.add-product:hover{
+    background-color: #ef7070; /* xám đẹp (gray-500) */
+}
+span.bg-primary{
+    background-color: #e53935 !important; /* đỏ */
+    color: #ffffff !important;
+}
