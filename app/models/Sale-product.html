@@ -47,137 +47,131 @@
 </head>
 <body class="-background-lightbg dark:bg-background-dark text-[#1b0d14] dark:text-white transition-colors duration-300">
 <!-- Top Navigation Bar -->
-<div class="w-full bg-white dark:bg-[#101622] border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
-    <div class="layout-container flex justify-center w-full">
-    <div class="px-4 md:px-10 lg:px-40 py-3 w-full max-w-[1440px]">
-      <header class="sticky top-0 z-50 w-full border-b border-[#e7ebf3] bg-background-light/95 backdrop-blur dark:bg-background-dark/95 dark:border-gray-800">
-        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center gap-8">
-        <a class="flex items-center gap-2 text-text-main dark:text-white group" href="#">
-        <div class="size-8 text-primary">
-        
-        </div>
-                        <a href="../../index.html">
-                        <img src="../../public/img/Mainlogo.png" alt="" class="main-logo">
-                        <div class="My-store">Azces Store</div>
-                        </a>
-                        </a>
-                        <nav class="hidden md:flex items-center gap-6">
-                          <a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary" href="Male-product.html">Nam</a>
-                        <a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary" href="Female-product.html">Nữ</a>
-                        <a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary" href="Kids-product.html">Trẻ em</a>
+<header class="sticky top-0 z-50 w-full border-b border-[#e7ebf3] bg-background-light/95 backdrop-blur dark:bg-background-dark/95 dark:border-gray-800">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-text-main dark:text-white group" href="#">
+<div class="size-8 text-primary">
 
-                        <a class="text-sm font-bold text-primary" href="Sale-product.html">Sale</a>
-                      </nav>
-                        </div>
-                        <div class="flex flex-1 justify-end gap-4 items-center">
-                          <div class="relative w-80">
-                            <!-- input search -->
-                            <input
-                              type="text"
-                              id="searchInput"
-                              placeholder="Search......"
-                              class="w-full h-10 pl-4 pr-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-slate-900 dark:text-white outline-none"
-                            />
-                          
-                            <!-- icon search -->
-                            <button class="absolute right-2 top-1/2 -translate-y-1/2">
-                              <span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+                <a href="../../index.html">
+                <img src="../../public/img/Mainlogo.png" alt="" class="main-logo">
+                <div class="My-store">Azces Store</div>
+                </a>
+                </a>
+                <nav class="hidden md:flex items-center gap-6">
+                 <a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary" href="Male-product.html">Nam</a>
+                <a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary" href="Female-product.html">Nữ</a>
+                <a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary" href="Kids-product.html">Trẻ em</a>
+                <a class="text-sm font-bold text-primary" href="Sale-product.html">Sale</a>
+
+                </nav>
+                </div>
+                <div class="flex flex-1 justify-end gap-4 items-center">
+                  <div class="relative w-80">
+                    <!-- input search -->
+                    <input
+                      type="text"
+                      id="searchInput"
+                      placeholder="Search......"
+                      class="w-full h-10 pl-4 pr-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-slate-900 dark:text-white outline-none"
+                    />
+                  
+                    <!-- icon search -->
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2">
+                      <span class="material-symbols-outlined text-[20px]">search</span>
+                    </button>
+                  
+                    <!-- box kết quả -->
+                    <div
+                      id="searchResult"
+                      class="absolute top-12 left-0 w-full bg-white dark:bg-gray-900 shadow-lg rounded-lg hidden z-50 max-h-72 overflow-y-auto"
+                      style="color:white;"
+                    ></div>
+                  </div>
+                <div class="flex items-center gap-2">
+                <button class="sm:hidden flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800">
+                <span class="material-symbols-outlined" style="font-size: 24px;" id="search">search</span>
+                </button>
+                <button class="flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 relative group" id="circle">
+                <span class="material-symbols-outlined group-hover:text-primary transition-colors" style="font-size: 24px;" id="shopping">shopping_bag</span>
+                <span class="absolute top-1.5 right-1.5 size-2 rounded-full bg-primary"></span>
+                </button>
+                 <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-blue-700 transition-colors text-white text-sm font-bold tracking-wide" id="Login">
+            <a href="../views/user/Login.html" ><span class="truncate">Đăng nhập</span></a>
+            </button>
+            <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors text-slate-900 dark:text-white text-sm font-bold tracking-wide" id="Signin">
+            <a href="../views/user/Sigin.html" ><span class="truncate">Đăng ký</span></a>
+            </button>
+                <button class="flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 group">
+                  <button id="cartBtn"
+                        class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-slate-900 dark:text-white transition-colors">
+                        <span class="material-symbols-outlined text-[20px]" id="cart">shopping_cart</span>
+                        <span id="cartCount">0</span>
+                        </button>
+
+                        <div id="cartDropdown">
+                        <ul id="cartItems"></ul>
+
+                        <div style="margin-top:8px; display:flex; justify-content:space-between; align-items:center;">
+                            <span class="total">Tổng: <strong id="cartTotal">0₫</strong></span>
+                            <button id="clearCart"
+                            style="font-size:13px;color:red;border:1px solid red;padding:4px 8px;border-radius:6px;">
+                            Xóa tất cả
                             </button>
-                          
-                            <!-- box kết quả -->
-                            <div
-                              id="searchResult"
-                              class="absolute top-12 left-0 w-full bg-white dark:bg-gray-900 shadow-lg rounded-lg hidden z-50 max-h-72 overflow-y-auto"
-                              style="color:white;"
-                            ></div>
-                          </div>
-                        <div class="flex items-center gap-2">
-                        <button class="sm:hidden flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800">
-                        <span class="material-symbols-outlined" style="font-size: 24px;" id="search">search</span>
-                        </button>
-                        <button class="flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 relative group" id="circle">
-                        <span class="material-symbols-outlined group-hover:text-primary transition-colors" style="font-size: 24px;" id="shopping">shopping_bag</span>
-                        <span class="absolute top-1.5 right-1.5 size-2 rounded-full bg-primary"></span>
-                        </button>
-                         <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary hover:bg-blue-700 transition-colors text-white text-sm font-bold tracking-wide" id="Login">
-                    <a href="../views/user/Login.html" ><span class="truncate">Đăng nhập</span></a>
-                    </button>
-                    <button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors text-slate-900 dark:text-white text-sm font-bold tracking-wide" id="Signin">
-                    <a href="../views/user/Sigin.html" ><span class="truncate">Đăng ký</span></a>
-                    </button>
-                        <button class="flex items-center justify-center rounded-lg p-2 text-text-main hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 group">
-                          <button id="cartBtn"
-                                class="flex items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-slate-900 dark:text-white transition-colors">
-                                <span class="material-symbols-outlined text-[20px]" id="cart">shopping_cart</span>
-                                <span id="cartCount">0</span>
-                                </button>
-        
-                                <div id="cartDropdown">
-                                <ul id="cartItems" style="color:black"></ul>
-        
-                                <div style="margin-top:8px; display:flex; justify-content:space-between; align-items:center; color:black;">
-                                    <span class="total">Tổng: <strong id="cartTotal">0₫</strong></span>
-                                    <button id="clearCart"
-                                    style="font-size:13px;color:red;border:1px solid red;padding:4px 8px;border-radius:6px;">
-                                    Xóa tất cả
-                                    </button>
-                                </div>
-                                <div style="display: flex;
-                                justify-content: center;
-                                background-color: rgb(26, 24, 24);
-                                margin-top:5%;
-                                align-items: center;
-                                height: 40px;
-                                border-radius: 10px;
-                                color:white;
-                                padding-bottom: 10px;
-                                ">
-                                  <a href="Chi-Tiet/Chi-Tiet-San-Pham.html"style="margin-top:8px;
-                                
-                                "><span>Chi tiết và thanh toán</span></a>
-                                </div>
-        
-                                </div>
-                                  <div class="nav-media">
-                              <input type="checkbox" id="toggleMenu" hidden>
-                              <label for="toggleMenu" class="setting">☰</label>
-        
-                              <div id="menu2">
-                                <a href="/Myproject/index.html"><li>Home</li></a>
-                                <li>About</li>
-                                <li>Contact</li>
-                                <a href="../product/Male-product.html"><li>Male</li></a>
-                                <a href="../product/Female-product.html"><li>Female</li></a>
-                                <a href="../product/Kids-product.html"><li>Kids</li></a>
-                                <a href="../user/Login.html"><li>Login</li></a>
-                              </ul>
-                            </div>
-                          </div>
-              <!--Login-->
-                   <div class="nav">
-                            <span id="helloUser" class="helloUser"></span>
-        
-                            <label onclick="menu.hidden^=1"
-                                class="material-symbols-outlined cursor-pointer hover:text-primary"
-                                style="font-size: 24px;" id="user-icon">
-                                person
-                            </label>
-        
-                            <ul id="menu" hidden>
-                                <a href="index.html"><li>Home</li></a>
-                                <li>About</li>
-                                <li id="logoutBtn" style="color:red;cursor:pointer">Đăng xuất</li>
-                            </ul>
-                            </div>
-        </button>
-        </div>
-        </div>
-        </div>
-        </header>
-    </div>
-    </div>
-    </div>
+                        </div>
+                        <div style="display: flex;
+                        justify-content: center;
+                        background-color: rgb(26, 24, 24);
+                        margin-top:5%;
+                        align-items: center;
+                        height: 40px;
+                        border-radius: 10px;
+                        color:white;
+                        padding-bottom: 10px;
+                        ">
+                          <a href="../models/Chi-TIet/Chi-Tiet-San-Pham.html"style="margin-top:8px;
+                        
+                        "><span>Chi tiết và thanh toán</span></a>
+                        </div>
+
+                        </div>
+                          <div class="nav-media">
+                      <input type="checkbox" id="toggleMenu" hidden>
+                      <label for="toggleMenu" class="setting">☰</label>
+
+                      <div id="menu2">
+                        <a href="../../index.html"><li>Home</li></a>
+                        <li>About</li>
+                        <li>Contact</li>
+                        <a href="../models/Male-product.html"><li>Male</li></a>
+                        <a href="../models/Female-product.html"><li>Female</li></a>
+                        <a href="../models/Kids-product.html"><li>Kids</li></a>
+                        <a href="../user/Login.html"><li>Login</li></a>
+                      </ul>
+                    </div>
+                  </div>
+      <!--Login-->
+           <div class="nav">
+                    <span id="helloUser" class="helloUser"></span>
+
+                    <label onclick="menu.hidden^=1"
+                        class="material-symbols-outlined cursor-pointer hover:text-primary"
+                        style="font-size: 24px;" id="user-icon">
+                        person
+                    </label>
+
+                    <ul id="menu" hidden>
+                        <a href="../../index.html"><li>Home</li></a>
+                        <li>About</li>
+                        <li id="logoutBtn" style="color:red;cursor:pointer">Đăng xuất</li>
+                    </ul>
+                    </div>
+</button>
+</div>
+</div>
+</div>
+</header>
 <main class="max-w-[1440px] mx-auto px-4 lg:px-20 py-8">
 <!-- Hero Section -->
 <div class="mb-12">
@@ -317,7 +311,7 @@
 <div class="absolute top-3 right-3 z-10 bg-primary text-white text-xs font-black px-2 py-1 rounded">
                         -25%
                     </div>
-<a href="Sale-Product/">
+<a href="Sale-Product/Ao-Sale/Chinos.html">
   <div class="w-full h-full bg-center bg-no-repeat bg-cover transform transition-transform duration-500 group-hover:scale-110" data-alt="Khaki slim fit chino pants" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUoLfHzM_MVFbLkdDWDzcWbOEC9DJ7WrE-PTFjP_UWuji9GsMUsTRkdQnz9e8AeLMvgH3f39sWlLRM2r3Fqhao-6-r2whR0xnLqfcPUgNcMy8VGy6_LmOnWshg8MxQeKdpMdEwK3bufmBKWKE_mLEkIpEcO-outxpmhGxgLcAEkP9FQI-T0hWjziMPrqGYXZJop8NMtHWQLpJYByfTIOWheUC1jWBDSixiLoxUX-gbZvHbBWFcROAypwxBLQ421_CaK7hr_hJIKzE");'>
 </div>
 </a>

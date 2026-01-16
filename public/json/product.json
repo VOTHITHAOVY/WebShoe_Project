@@ -109,7 +109,7 @@
     "name": "Giày Thể Thao",
     "img": "/public/img/Giay-The-Thao-Kid-1.png",
     "price": "450.000đ",
-    "page":"/app/models/Kid-Product/Kid-Cloth/Giay-The-Thao.html"
+    "page":"/app/models/Kid-Product/Kid-Shoes/Giay-The-Thao.html"
   },
    {
     "id": 17,
@@ -136,7 +136,7 @@
     "name": "Slim Fit Chinos",
     "img": "/public/img/Chinos-1.png",
     "price": "450.000đ",
-    "page":"/app/models/Kid-Product/Kid-Cloth/Chinos.html"
+    "page":"/app/models/Sale-Product/Kid-Cloth/Chinos.html"
   }
 
 ]

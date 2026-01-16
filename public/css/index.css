@@ -143,6 +143,20 @@
 #menu2 li:hover{
   background-color: gainsboro;
 }
+.Header{
+  display: block;
+}
+#Login,#Signin ,.Male,.Female,.Kids,.Sale{
+  display: none;
+}
+.search-input{
+  position: absolute;
+  left:35%;
+  top:30%;
+  
+  width: 50%;
+
+}
 }
 #cartDropdown {
   position: absolute;
